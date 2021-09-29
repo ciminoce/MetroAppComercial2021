@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E286380E-653D-4296-B511-01AD6DED2DEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MetroAppComercial2021.Windows</RootNamespace>
+    <AssemblyName>MetroAppComercial2021.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Excepciones\GuiMessageManager.cs" />
+    <Compile Include="FormBombones\FrmBombones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBombones\FrmBombones.Designer.cs">
+      <DependentUpon>FrmBombones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBombones\FrmBombonesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBombones\FrmBombonesEdit.Designer.cs">
+      <DependentUpon>FrmBombonesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCajas\FrmBombonCajaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajas\FrmBombonCajaEdit.Designer.cs">
+      <DependentUpon>FrmBombonCajaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCajas\FrmDetalleCajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajas\FrmDetalleCajas.Designer.cs">
+      <DependentUpon>FrmDetalleCajas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCajas\FrmCajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajas\FrmCajas.Designer.cs">
+      <DependentUpon>FrmCajas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCajas\FrmCajasEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajas\FrmCajasEdit.Designer.cs">
+      <DependentUpon>FrmCajasEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChocolates\FrmChocolates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChocolates\FrmChocolates.Designer.cs">
+      <DependentUpon>FrmChocolates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChocolates\FrmChocolatesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChocolates\FrmChocolatesEdit.Designer.cs">
+      <DependentUpon>FrmChocolatesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes\FrmClientesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes\FrmClientesEdit.Designer.cs">
+      <DependentUpon>FrmClientesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNueces\FrmNueces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNueces\FrmNueces.Designer.cs">
+      <DependentUpon>FrmNueces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNueces\FrmNuecesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNueces\FrmNuecesEdit.Designer.cs">
+      <DependentUpon>FrmNuecesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedores\FrmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedores\FrmProveedores.Designer.cs">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedores\FrmProveedoresEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedores\FrmProveedoresEdit.Designer.cs">
+      <DependentUpon>FrmProveedoresEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRellenos\FrmRellenos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRellenos\FrmRellenos.Designer.cs">
+      <DependentUpon>FrmRellenos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRellenos\FrmRellenosEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRellenos\FrmRellenosEdit.Designer.cs">
+      <DependentUpon>FrmRellenosEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProvincias\FrmProvincias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProvincias\FrmProvincias.Designer.cs">
+      <DependentUpon>FrmProvincias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProvincias\FrmProvinciasEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProvincias\FrmProvinciasEdit.Designer.cs">
+      <DependentUpon>FrmProvinciasEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HelperCalculos.cs" />
+    <Compile Include="Helpers\HelperCombo.cs" />
+    <Compile Include="Helpers\HelperForm.cs" />
+    <Compile Include="Helpers\HelperGrid.cs" />
+    <Compile Include="Helpers\HelperMessageBox.cs" />
+    <Compile Include="Helpers\MessageType.cs" />
+    <Compile Include="Localidades\FrmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localidades\FrmLocalidades.Designer.cs">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localidades\FrmLocalidadesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localidades\FrmLocalidadesEdit.Designer.cs">
+      <DependentUpon>FrmLocalidadesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBombones\FrmBombones.resx">
+      <DependentUpon>FrmBombones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBombones\FrmBombonesEdit.resx">
+      <DependentUpon>FrmBombonesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCajas\FrmBombonCajaEdit.resx">
+      <DependentUpon>FrmBombonCajaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCajas\FrmDetalleCajas.resx">
+      <DependentUpon>FrmDetalleCajas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCajas\FrmCajas.resx">
+      <DependentUpon>FrmCajas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCajas\FrmCajasEdit.resx">
+      <DependentUpon>FrmCajasEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChocolates\FrmChocolates.resx">
+      <DependentUpon>FrmChocolates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChocolates\FrmChocolatesEdit.resx">
+      <DependentUpon>FrmChocolatesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientes\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientes\FrmClientesEdit.resx">
+      <DependentUpon>FrmClientesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNueces\FrmNueces.resx">
+      <DependentUpon>FrmNueces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNueces\FrmNuecesEdit.resx">
+      <DependentUpon>FrmNuecesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedores\FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedores\FrmProveedoresEdit.resx">
+      <DependentUpon>FrmProveedoresEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRellenos\FrmRellenos.resx">
+      <DependentUpon>FrmRellenos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRellenos\FrmRellenosEdit.resx">
+      <DependentUpon>FrmRellenosEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProvincias\FrmProvincias.resx">
+      <DependentUpon>FrmProvincias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProvincias\FrmProvinciasEdit.resx">
+      <DependentUpon>FrmProvinciasEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localidades\FrmLocalidades.resx">
+      <DependentUpon>FrmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localidades\FrmLocalidadesEdit.resx">
+      <DependentUpon>FrmLocalidadesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocolate_bar_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nut_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pancake_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_image_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetroAppComercial2021.Datos.Comun\MetroAppComercial2021.Datos.Comun.csproj">
+      <Project>{e8786a5c-afc0-4a2a-8811-326dbd430d58}</Project>
+      <Name>MetroAppComercial2021.Datos.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroAppComercial2021.Datos.Sql\MetroAppComercial2021.Datos.Sql.csproj">
+      <Project>{80862CAE-66B6-4F71-84CA-77D4404BA71E}</Project>
+      <Name>MetroAppComercial2021.Datos.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroAppComercial2021.Entidades\MetroAppComercial2021.Entidades.csproj">
+      <Project>{674F2048-7A54-4D09-8844-9F3E84BBBB19}</Project>
+      <Name>MetroAppComercial2021.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroAppComercial2021.Servicios\MetroAppComercial2021.Servicios.csproj">
+      <Project>{2e45833f-c311-4551-b91c-6754eba70211}</Project>
+      <Name>MetroAppComercial2021.Servicios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\romania_map_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\city_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secured_letter_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marker_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackberry_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client_management_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dessert_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sell_stock_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level_up_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\low_price_pound_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\low_price_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_20px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
