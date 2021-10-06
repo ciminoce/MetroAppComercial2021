@@ -63,6 +63,11 @@ namespace MetroAppComercial2021.Servicios
                 using (var context = _unitOfWork.Create())
                 {
                     registrosAfectados = context.repositorios.cajasRepositorio.Agregar(caja);
+                    foreach (var detalleCaja in caja.DetalleCajas)
+                    {
+                        detalleCaja.CajaId = caja.Id;
+                        registrosAfectados = context.repositorios.detalleCajasRepositorio.Agregar(detalleCaja);
+                    }
                     context.SaveChanges();
                 }
 
@@ -120,6 +125,10 @@ namespace MetroAppComercial2021.Servicios
                 int registrosAfectados = 0;
                 using (var context = _unitOfWork.Create())
                 {
+                    foreach (var detalle in caja.DetalleCajas)
+                    {
+                        registrosAfectados = context.repositorios.detalleCajasRepositorio.Borrar(detalle);
+                    }
                     registrosAfectados = context.repositorios.cajasRepositorio.Borrar(caja);
                     context.SaveChanges();
                 }

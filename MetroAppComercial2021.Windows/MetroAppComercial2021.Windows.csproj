@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CarritoDeDetalles.cs" />
     <Compile Include="Excepciones\GuiMessageManager.cs" />
     <Compile Include="FormBombones\FrmBombones.cs">
       <SubType>Form</SubType>
@@ -364,5 +365,6 @@
   <ItemGroup>
     <None Include="Resources\search_20px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

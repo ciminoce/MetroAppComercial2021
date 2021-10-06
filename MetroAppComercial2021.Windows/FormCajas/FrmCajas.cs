@@ -160,7 +160,7 @@ namespace MetroAppComercial2021.Windows.FormCajas
             }
 
             DataGridViewRow r = DatosMetroGrid.SelectedRows[0];
-            var b = (Caja)r.Tag;
+            var cajaABorrar = (Caja)r.Tag;
             DialogResult dr = HelperMessageBox.Message(this, GuiMessageManager.ConfirmDelete(), "Confirmar");
 
             if (dr == DialogResult.Yes)
@@ -168,9 +168,11 @@ namespace MetroAppComercial2021.Windows.FormCajas
                 try
                 {
 
-                    if (!_servicio.EstaRelacionado(b))
+                    if (!_servicio.EstaRelacionado(cajaABorrar))
                     {
-                        int registrosBorrados = _servicio.Borrar(b);
+                        //Tengo que tener la caja con los detalles
+                        cajaABorrar = _servicio.GetCajaConDetalle(cajaABorrar.Id);
+                        int registrosBorrados = _servicio.Borrar(cajaABorrar);
                         if (registrosBorrados == 0)
                         {
                             HelperMessageBox.Message(this, GuiMessageManager.NonExistingOrModifiedRecord(),

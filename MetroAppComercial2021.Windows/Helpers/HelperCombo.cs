@@ -89,5 +89,21 @@ namespace MetroAppComercial2021.Windows.Helpers
             combo.ValueMember = "TipoRellenoId";
             combo.SelectedIndex = 0;
         }
+
+        public static void CargarDatosComboBombones(ref MetroComboBox combo)
+        {
+            IUnitOfWork _unitOfWork = new UnitOfWorkSql();
+            List<Bombon> lista = new BombonesServicios(_unitOfWork).GetLista();
+            Bombon defaultBombon = new Bombon()
+            {
+                Id = 0,
+                NombreProducto = "<Seleccione Bombón>"
+            };
+            lista.Insert(0, defaultBombon);
+            combo.DataSource = lista;
+            combo.DisplayMember = "NombreProducto";
+            combo.ValueMember = "Id";
+            combo.SelectedIndex = 0;
+        }
     }
 }

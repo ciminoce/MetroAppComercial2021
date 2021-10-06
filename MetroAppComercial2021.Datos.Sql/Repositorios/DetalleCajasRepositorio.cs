@@ -49,6 +49,73 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
 
         }
 
+        public int Agregar(DetalleCaja detalleCaja)
+        {
+            try
+            {
+                int registrosAfectados = 0;
+                string cadenaComando = "INSERT INTO DetallesCajas (CajaId, BombonId, Cantidad)" +
+                                       " VALUES (@caja, @bom, @cant)";
+                using (var comando = (SqlCommand)CreateCommand(cadenaComando))
+                {
+                    comando.Parameters.AddWithValue("@caja", detalleCaja.CajaId);
+                    comando.Parameters.AddWithValue("@bom", detalleCaja.BombonId);
+                    comando.Parameters.AddWithValue("@cant", detalleCaja.Cantidad);
+
+
+
+                    registrosAfectados = comando.ExecuteNonQuery();
+                    if (registrosAfectados > 0)
+                    {
+                        string cadenaOutput = "SELECT @@IDENTITY";
+                        using (var comandoOutput = CreateCommand(cadenaOutput))
+                        {
+                            detalleCaja.DetalleCajaId = (int)(decimal)comandoOutput.ExecuteScalar();
+                        }
+                        cadenaComando = "SELECT RowVersion FROM DetallesCajas WHERE DetalleCajaId=@id";
+                        using (var comandoRow = (SqlCommand)CreateCommand(cadenaComando))
+                        {
+                            comandoRow.Parameters.AddWithValue("@id", detalleCaja.DetalleCajaId);
+                            detalleCaja.RowVersion = (byte[])comandoRow.ExecuteScalar();
+                        }
+
+                    }
+                }
+
+                return registrosAfectados;
+            }
+            catch (Exception ex)
+            {
+                throw DbExceptionManager.InsertException(tabla);
+            }
+
+
+        }
+
+        public int Borrar(DetalleCaja obj)
+        {
+            int registrosAfectados = 0;
+            try
+            {
+                string cadenaComando = "DELETE FROM DetallesCajas WHERE DetalleCajaId=@id AND RowVersion=@ver";
+                using (var comando = (SqlCommand)CreateCommand(cadenaComando))
+                {
+                    comando.Parameters.AddWithValue("@id", obj.DetalleCajaId);
+                    comando.Parameters.AddWithValue("@ver", obj.RowVersion);
+
+                    registrosAfectados = comando.ExecuteNonQuery();
+                }
+
+                return registrosAfectados;
+            }
+            catch (Exception e)
+            {
+                throw DbExceptionManager.DeleteException(tabla);
+            }
+
+
+        }
+
         private DetalleCaja ConstruirDetalle(SqlDataReader reader)
         {
             return new DetalleCaja()
