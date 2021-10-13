@@ -25,6 +25,12 @@ namespace MetroAppComercial2021.Datos.Sql.UnitOfWork
             bombonesRepositorio = new BombonesRepositorio(context, transaction);
             cajasRepositorio = new CajasRepositorio(context, transaction);
             detalleCajasRepositorio = new DetalleCajasRepositorio(context, transaction);
+            empleadosRepositorio = new EmpleadosRepositorio(context, transaction);
+            rolesRepositorio = new RolesRepositorio(context, transaction);
+            usuariosRepositorio = new UsuariosRepositorio(context, transaction);
+            menusRepositorio = new MenusRepositorio(context, transaction);
+            permisosRepositorio = new PermisosRepositorio(context, transaction);
+            noPermisosRepositorio = new NoPermisosRepositorio(context, transaction);
         }
 
         public IRellenosRepositorio rellenosRepositorio { get; }
@@ -37,5 +43,11 @@ namespace MetroAppComercial2021.Datos.Sql.UnitOfWork
         public IBombonesRepositorio bombonesRepositorio { get; }
         public ICajasRepositorio cajasRepositorio { get; }
         public IDetalleCajasRepositorio detalleCajasRepositorio { get; }
+        public IEmpleadosRepositorio empleadosRepositorio { get; }
+        public IRolesRepositorio rolesRepositorio { get; }
+        public IUsuariosRepositorio usuariosRepositorio { get; }
+        public IPermisosRepositorio permisosRepositorio { get; }
+        public IMenusRepositorio menusRepositorio { get; }
+        public INoPermisosRepositorio noPermisosRepositorio { get; }
     }
 }

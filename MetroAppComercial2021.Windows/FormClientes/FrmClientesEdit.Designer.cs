@@ -37,23 +37,23 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.LocalidadMetroComboBox = new MetroFramework.Controls.MetroComboBox();
             this.ProvinciasMetroComboBox = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.CodPostalMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.DireccionMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CancelarIconButton = new FontAwesome.Sharp.IconButton();
+            this.OKIconButton = new FontAwesome.Sharp.IconButton();
+            this.CodPostalMetroTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.DireccionMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.MailMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.MovilMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.FijoMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.CancelarIconButton = new FontAwesome.Sharp.IconButton();
-            this.OKIconButton = new FontAwesome.Sharp.IconButton();
             this.ApellidoMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.NombresMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -63,7 +63,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(56, 121);
+            this.metroLabel1.Location = new System.Drawing.Point(46, 96);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(67, 19);
             this.metroLabel1.TabIndex = 0;
@@ -72,7 +72,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(62, 88);
+            this.metroLabel2.Location = new System.Drawing.Point(52, 63);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(61, 19);
             this.metroLabel2.TabIndex = 0;
@@ -142,41 +142,6 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.metroLabel6.TabIndex = 2;
             this.metroLabel6.Text = "Localidad:";
             // 
-            // CodPostalMetroTextBox
-            // 
-            // 
-            // 
-            // 
-            this.CodPostalMetroTextBox.CustomButton.Image = null;
-            this.CodPostalMetroTextBox.CustomButton.Location = new System.Drawing.Point(119, 2);
-            this.CodPostalMetroTextBox.CustomButton.Name = "";
-            this.CodPostalMetroTextBox.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.CodPostalMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.CodPostalMetroTextBox.CustomButton.TabIndex = 1;
-            this.CodPostalMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.CodPostalMetroTextBox.CustomButton.UseSelectable = true;
-            this.CodPostalMetroTextBox.CustomButton.Visible = false;
-            this.CodPostalMetroTextBox.DisplayIcon = true;
-            this.CodPostalMetroTextBox.Icon = global::MetroAppComercial2021.Windows.Properties.Resources.secured_letter_20px;
-            this.CodPostalMetroTextBox.Lines = new string[0];
-            this.CodPostalMetroTextBox.Location = new System.Drawing.Point(105, 64);
-            this.CodPostalMetroTextBox.MaxLength = 10;
-            this.CodPostalMetroTextBox.Multiline = true;
-            this.CodPostalMetroTextBox.Name = "CodPostalMetroTextBox";
-            this.CodPostalMetroTextBox.PasswordChar = '\0';
-            this.CodPostalMetroTextBox.PromptText = "Ingrese el cód. postal";
-            this.CodPostalMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.CodPostalMetroTextBox.SelectedText = "";
-            this.CodPostalMetroTextBox.SelectionLength = 0;
-            this.CodPostalMetroTextBox.SelectionStart = 0;
-            this.CodPostalMetroTextBox.ShortcutsEnabled = true;
-            this.CodPostalMetroTextBox.Size = new System.Drawing.Size(149, 32);
-            this.CodPostalMetroTextBox.TabIndex = 2;
-            this.CodPostalMetroTextBox.UseSelectable = true;
-            this.CodPostalMetroTextBox.WaterMark = "Ingrese el cód. postal";
-            this.CodPostalMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.CodPostalMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
@@ -194,41 +159,6 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.metroLabel4.Size = new System.Drawing.Size(78, 19);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Cód. Postal:";
-            // 
-            // DireccionMetroTextBox
-            // 
-            // 
-            // 
-            // 
-            this.DireccionMetroTextBox.CustomButton.Image = null;
-            this.DireccionMetroTextBox.CustomButton.Location = new System.Drawing.Point(458, 2);
-            this.DireccionMetroTextBox.CustomButton.Name = "";
-            this.DireccionMetroTextBox.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.DireccionMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.DireccionMetroTextBox.CustomButton.TabIndex = 1;
-            this.DireccionMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.DireccionMetroTextBox.CustomButton.UseSelectable = true;
-            this.DireccionMetroTextBox.CustomButton.Visible = false;
-            this.DireccionMetroTextBox.DisplayIcon = true;
-            this.DireccionMetroTextBox.Icon = global::MetroAppComercial2021.Windows.Properties.Resources.marker_20px;
-            this.DireccionMetroTextBox.Lines = new string[0];
-            this.DireccionMetroTextBox.Location = new System.Drawing.Point(105, 25);
-            this.DireccionMetroTextBox.MaxLength = 100;
-            this.DireccionMetroTextBox.Multiline = true;
-            this.DireccionMetroTextBox.Name = "DireccionMetroTextBox";
-            this.DireccionMetroTextBox.PasswordChar = '\0';
-            this.DireccionMetroTextBox.PromptText = "Ingrese la dirección";
-            this.DireccionMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.DireccionMetroTextBox.SelectedText = "";
-            this.DireccionMetroTextBox.SelectionLength = 0;
-            this.DireccionMetroTextBox.SelectionStart = 0;
-            this.DireccionMetroTextBox.ShortcutsEnabled = true;
-            this.DireccionMetroTextBox.Size = new System.Drawing.Size(488, 32);
-            this.DireccionMetroTextBox.TabIndex = 1;
-            this.DireccionMetroTextBox.UseSelectable = true;
-            this.DireccionMetroTextBox.WaterMark = "Ingrese la dirección";
-            this.DireccionMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DireccionMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel3
             // 
@@ -285,6 +215,104 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.metroLabel7.Size = new System.Drawing.Size(86, 19);
             this.metroLabel7.TabIndex = 2;
             this.metroLabel7.Text = "Teléfono Fijo:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // CancelarIconButton
+            // 
+            this.CancelarIconButton.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.CancelarIconButton.IconColor = System.Drawing.Color.Red;
+            this.CancelarIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CancelarIconButton.Location = new System.Drawing.Point(446, 413);
+            this.CancelarIconButton.Name = "CancelarIconButton";
+            this.CancelarIconButton.Size = new System.Drawing.Size(99, 60);
+            this.CancelarIconButton.TabIndex = 4;
+            this.CancelarIconButton.UseVisualStyleBackColor = true;
+            this.CancelarIconButton.Click += new System.EventHandler(this.CancelarIconButton_Click);
+            // 
+            // OKIconButton
+            // 
+            this.OKIconButton.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.OKIconButton.IconColor = System.Drawing.Color.Blue;
+            this.OKIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.OKIconButton.Location = new System.Drawing.Point(147, 413);
+            this.OKIconButton.Name = "OKIconButton";
+            this.OKIconButton.Size = new System.Drawing.Size(99, 60);
+            this.OKIconButton.TabIndex = 3;
+            this.OKIconButton.UseVisualStyleBackColor = true;
+            this.OKIconButton.Click += new System.EventHandler(this.OKIconButton_Click);
+            // 
+            // CodPostalMetroTextBox
+            // 
+            // 
+            // 
+            // 
+            this.CodPostalMetroTextBox.CustomButton.Image = null;
+            this.CodPostalMetroTextBox.CustomButton.Location = new System.Drawing.Point(119, 2);
+            this.CodPostalMetroTextBox.CustomButton.Name = "";
+            this.CodPostalMetroTextBox.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.CodPostalMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.CodPostalMetroTextBox.CustomButton.TabIndex = 1;
+            this.CodPostalMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.CodPostalMetroTextBox.CustomButton.UseSelectable = true;
+            this.CodPostalMetroTextBox.CustomButton.Visible = false;
+            this.CodPostalMetroTextBox.DisplayIcon = true;
+            this.CodPostalMetroTextBox.Icon = global::MetroAppComercial2021.Windows.Properties.Resources.secured_letter_20px;
+            this.CodPostalMetroTextBox.Lines = new string[0];
+            this.CodPostalMetroTextBox.Location = new System.Drawing.Point(105, 64);
+            this.CodPostalMetroTextBox.MaxLength = 10;
+            this.CodPostalMetroTextBox.Multiline = true;
+            this.CodPostalMetroTextBox.Name = "CodPostalMetroTextBox";
+            this.CodPostalMetroTextBox.PasswordChar = '\0';
+            this.CodPostalMetroTextBox.PromptText = "Ingrese el cód. postal";
+            this.CodPostalMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CodPostalMetroTextBox.SelectedText = "";
+            this.CodPostalMetroTextBox.SelectionLength = 0;
+            this.CodPostalMetroTextBox.SelectionStart = 0;
+            this.CodPostalMetroTextBox.ShortcutsEnabled = true;
+            this.CodPostalMetroTextBox.Size = new System.Drawing.Size(149, 32);
+            this.CodPostalMetroTextBox.TabIndex = 2;
+            this.CodPostalMetroTextBox.UseSelectable = true;
+            this.CodPostalMetroTextBox.WaterMark = "Ingrese el cód. postal";
+            this.CodPostalMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.CodPostalMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // DireccionMetroTextBox
+            // 
+            // 
+            // 
+            // 
+            this.DireccionMetroTextBox.CustomButton.Image = null;
+            this.DireccionMetroTextBox.CustomButton.Location = new System.Drawing.Point(458, 2);
+            this.DireccionMetroTextBox.CustomButton.Name = "";
+            this.DireccionMetroTextBox.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.DireccionMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.DireccionMetroTextBox.CustomButton.TabIndex = 1;
+            this.DireccionMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.DireccionMetroTextBox.CustomButton.UseSelectable = true;
+            this.DireccionMetroTextBox.CustomButton.Visible = false;
+            this.DireccionMetroTextBox.DisplayIcon = true;
+            this.DireccionMetroTextBox.Icon = global::MetroAppComercial2021.Windows.Properties.Resources.marker_20px;
+            this.DireccionMetroTextBox.Lines = new string[0];
+            this.DireccionMetroTextBox.Location = new System.Drawing.Point(105, 25);
+            this.DireccionMetroTextBox.MaxLength = 100;
+            this.DireccionMetroTextBox.Multiline = true;
+            this.DireccionMetroTextBox.Name = "DireccionMetroTextBox";
+            this.DireccionMetroTextBox.PasswordChar = '\0';
+            this.DireccionMetroTextBox.PromptText = "Ingrese la dirección";
+            this.DireccionMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.DireccionMetroTextBox.SelectedText = "";
+            this.DireccionMetroTextBox.SelectionLength = 0;
+            this.DireccionMetroTextBox.SelectionStart = 0;
+            this.DireccionMetroTextBox.ShortcutsEnabled = true;
+            this.DireccionMetroTextBox.Size = new System.Drawing.Size(488, 32);
+            this.DireccionMetroTextBox.TabIndex = 1;
+            this.DireccionMetroTextBox.UseSelectable = true;
+            this.DireccionMetroTextBox.WaterMark = "Ingrese la dirección";
+            this.DireccionMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DireccionMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // MailMetroTextBox
             // 
@@ -388,30 +416,6 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.FijoMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.FijoMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // CancelarIconButton
-            // 
-            this.CancelarIconButton.IconChar = FontAwesome.Sharp.IconChar.Ban;
-            this.CancelarIconButton.IconColor = System.Drawing.Color.Red;
-            this.CancelarIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CancelarIconButton.Location = new System.Drawing.Point(446, 413);
-            this.CancelarIconButton.Name = "CancelarIconButton";
-            this.CancelarIconButton.Size = new System.Drawing.Size(99, 60);
-            this.CancelarIconButton.TabIndex = 4;
-            this.CancelarIconButton.UseVisualStyleBackColor = true;
-            this.CancelarIconButton.Click += new System.EventHandler(this.CancelarIconButton_Click);
-            // 
-            // OKIconButton
-            // 
-            this.OKIconButton.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.OKIconButton.IconColor = System.Drawing.Color.Blue;
-            this.OKIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.OKIconButton.Location = new System.Drawing.Point(147, 413);
-            this.OKIconButton.Name = "OKIconButton";
-            this.OKIconButton.Size = new System.Drawing.Size(99, 60);
-            this.OKIconButton.TabIndex = 3;
-            this.OKIconButton.UseVisualStyleBackColor = true;
-            this.OKIconButton.Click += new System.EventHandler(this.OKIconButton_Click);
-            // 
             // ApellidoMetroTextBox
             // 
             // 
@@ -430,7 +434,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.ApellidoMetroTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.ApellidoMetroTextBox.Icon = global::MetroAppComercial2021.Windows.Properties.Resources.edit_image_20px;
             this.ApellidoMetroTextBox.Lines = new string[0];
-            this.ApellidoMetroTextBox.Location = new System.Drawing.Point(143, 88);
+            this.ApellidoMetroTextBox.Location = new System.Drawing.Point(133, 63);
             this.ApellidoMetroTextBox.MaxLength = 50;
             this.ApellidoMetroTextBox.Multiline = true;
             this.ApellidoMetroTextBox.Name = "ApellidoMetroTextBox";
@@ -466,7 +470,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.NombresMetroTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.NombresMetroTextBox.Icon = global::MetroAppComercial2021.Windows.Properties.Resources.edit_image_20px;
             this.NombresMetroTextBox.Lines = new string[0];
-            this.NombresMetroTextBox.Location = new System.Drawing.Point(143, 121);
+            this.NombresMetroTextBox.Location = new System.Drawing.Point(133, 96);
             this.NombresMetroTextBox.MaxLength = 50;
             this.NombresMetroTextBox.Multiline = true;
             this.NombresMetroTextBox.Name = "NombresMetroTextBox";
@@ -483,10 +487,6 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.NombresMetroTextBox.WaterMark = "Ingrese los nombres";
             this.NombresMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.NombresMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // FrmClientesEdit
             // 

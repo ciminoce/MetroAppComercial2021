@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroAppComercial2021.Windows.FrmTareas;
 
 namespace MetroAppComercial2021.Windows
 {
@@ -16,7 +17,7 @@ namespace MetroAppComercial2021.Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(new FrmLogin());
         }
     }
 }

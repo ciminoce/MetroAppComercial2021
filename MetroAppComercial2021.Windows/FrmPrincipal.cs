@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroAppComercial2021.Entidades.Entidades;
 using MetroAppComercial2021.Windows.FormBombones;
 using MetroAppComercial2021.Windows.FormCajas;
 using MetroAppComercial2021.Windows.FormChocolates;
@@ -15,7 +16,10 @@ using MetroAppComercial2021.Windows.FormNueces;
 using MetroAppComercial2021.Windows.FormProveedores;
 using MetroAppComercial2021.Windows.FormRellenos;
 using MetroAppComercial2021.Windows.FormProvincias;
+using MetroAppComercial2021.Windows.FormRoles;
+using MetroAppComercial2021.Windows.FrmTareas;
 using MetroAppComercial2021.Windows.Localidades;
+using MetroFramework.Controls;
 
 namespace MetroAppComercial2021.Windows
 {
@@ -28,18 +32,20 @@ namespace MetroAppComercial2021.Windows
 
         private void SalirMetroButton_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void RellenosMetroTile_Click(object sender, EventArgs e)
         {
             FrmRellenos frm = new FrmRellenos();
+            frm.SetUsuario(usuario);
             frm.ShowDialog(this);
         }
 
         private void ChocolatesMetroTile_Click(object sender, EventArgs e)
         {
             FrmChocolates frm = new FrmChocolates();
+            frm.SetUsuario(usuario);
             frm.ShowDialog(this);
         }
 
@@ -90,6 +96,55 @@ namespace MetroAppComercial2021.Windows
             FrmCajas frm = new FrmCajas();
             frm.ShowDialog(this);
 
+        }
+
+        private void EmpmleadosMetroTile_Click(object sender, EventArgs e)
+        {
+            FrmEmpleados.FrmEmpleados frm = new FrmEmpleados.FrmEmpleados();
+            frm.ShowDialog(this);
+        }
+
+        private Usuario usuario;
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            VerificarPermisos();
+        }
+
+        private void VerificarPermisos()
+        {
+            //Si el usuario es administrador 
+            //no chequeo nada y me voy
+            if (usuario.Rol.NombreRol=="Administrador")
+            {
+                return;
+            }
+
+            foreach (var control in this.Controls)
+            {
+                if (control is MetroTile)
+                {
+                    string opcionTile =(string) ((MetroTile)control).Tag;
+                    ((MetroTile)control).Enabled = usuario.TienePermiso(opcionTile);
+                }
+            }
+
+        }
+
+        private void RolesMetroTile_Click(object sender, EventArgs e)
+        {
+            FrmRoles frm = new FrmRoles();
+            frm.ShowDialog(this);
+        }
+
+        private void UsuariosMetroTile_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios.FrmUsuarios frm = new FrmUsuarios.FrmUsuarios();
+            frm.ShowDialog(this);
+        }
+
+        public void SetUsuario(Usuario usuario)
+        {
+            this.usuario = usuario;
         }
     }
 }

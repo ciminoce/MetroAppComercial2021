@@ -156,6 +156,30 @@
     <Compile Include="FormRellenos\FrmRellenosEdit.Designer.cs">
       <DependentUpon>FrmRellenosEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRoles\FrmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoles\FrmRoles.Designer.cs">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRoles\FrmRolesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoles\FrmRolesEdit.Designer.cs">
+      <DependentUpon>FrmRolesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleados\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleados\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleados\FrmEmpleadosEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleados\FrmEmpleadosEdit.Designer.cs">
+      <DependentUpon>FrmEmpleadosEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +197,24 @@
     </Compile>
     <Compile Include="FormProvincias\FrmProvinciasEdit.Designer.cs">
       <DependentUpon>FrmProvinciasEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTareas\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTareas\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios\FrmUsuariosEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios\FrmUsuariosEdit.Designer.cs">
+      <DependentUpon>FrmUsuariosEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HelperCalculos.cs" />
     <Compile Include="Helpers\HelperCombo.cs" />
@@ -242,6 +284,18 @@
     <EmbeddedResource Include="FormRellenos\FrmRellenosEdit.resx">
       <DependentUpon>FrmRellenosEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRoles\FrmRoles.resx">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoles\FrmRolesEdit.resx">
+      <DependentUpon>FrmRolesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleados\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleados\FrmEmpleadosEdit.resx">
+      <DependentUpon>FrmEmpleadosEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +304,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProvincias\FrmProvinciasEdit.resx">
       <DependentUpon>FrmProvinciasEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTareas\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios\FrmUsuariosEdit.resx">
+      <DependentUpon>FrmUsuariosEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Localidades\FrmLocalidades.resx">
       <DependentUpon>FrmLocalidades.cs</DependentUpon>
@@ -365,6 +428,11 @@
   <ItemGroup>
     <None Include="Resources\search_20px.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Ingreso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buying_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

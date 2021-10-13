@@ -73,6 +73,16 @@ namespace MetroAppComercial2021.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buying_48px {
+            get {
+                object obj = ResourceManager.GetObject("buying_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chocolate_bar_36px {
             get {
                 object obj = ResourceManager.GetObject("chocolate_bar_36px", resourceCulture);
@@ -136,6 +146,16 @@ namespace MetroAppComercial2021.Windows.Properties {
         internal static System.Drawing.Bitmap gift_48px {
             get {
                 object obj = ResourceManager.GetObject("gift_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ingreso {
+            get {
+                object obj = ResourceManager.GetObject("Ingreso", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

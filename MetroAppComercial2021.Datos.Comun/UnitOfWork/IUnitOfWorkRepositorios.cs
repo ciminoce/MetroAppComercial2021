@@ -14,5 +14,11 @@ namespace MetroAppComercial2021.Datos.Comun.UnitOfWork
         IBombonesRepositorio bombonesRepositorio { get; }
         ICajasRepositorio cajasRepositorio { get; }
         IDetalleCajasRepositorio detalleCajasRepositorio { get; }
+        IEmpleadosRepositorio empleadosRepositorio { get; }
+        IRolesRepositorio rolesRepositorio { get; }
+        IUsuariosRepositorio usuariosRepositorio { get; }
+        IPermisosRepositorio permisosRepositorio { get; }
+        IMenusRepositorio menusRepositorio { get; }
+        INoPermisosRepositorio noPermisosRepositorio { get; }
     }
 }

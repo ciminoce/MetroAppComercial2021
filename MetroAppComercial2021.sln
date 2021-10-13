@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroAppComercial2021.Datos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroAppComercial2021.Datos.Sql", "MetroAppComercial2021.Datos.Sql\MetroAppComercial2021.Datos.Sql.csproj", "{80862CAE-66B6-4F71-84CA-77D4404BA71E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroAppComercial2021.Datos.Access", "MetroAppComercial2021.Datos.Access\MetroAppComercial2021.Datos.Access.csproj", "{7BED3528-3DD6-4170-BE50-64CA8F94FCB4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroAppComercial2021.Servicios", "MetroAppComercial2021.Servicios\MetroAppComercial2021.Servicios.csproj", "{2E45833F-C311-4551-B91C-6754EBA70211}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroAppComercial2021.Reportes", "MetroAppComercial2021.Reportes\MetroAppComercial2021.Reportes.csproj", "{6F77879A-DA46-450B-8E0C-99E3BE4C7AFE}"
@@ -39,10 +37,6 @@ Global
 		{80862CAE-66B6-4F71-84CA-77D4404BA71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80862CAE-66B6-4F71-84CA-77D4404BA71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80862CAE-66B6-4F71-84CA-77D4404BA71E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BED3528-3DD6-4170-BE50-64CA8F94FCB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BED3528-3DD6-4170-BE50-64CA8F94FCB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BED3528-3DD6-4170-BE50-64CA8F94FCB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BED3528-3DD6-4170-BE50-64CA8F94FCB4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E45833F-C311-4551-B91C-6754EBA70211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E45833F-C311-4551-B91C-6754EBA70211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E45833F-C311-4551-B91C-6754EBA70211}.Release|Any CPU.ActiveCfg = Release|Any CPU

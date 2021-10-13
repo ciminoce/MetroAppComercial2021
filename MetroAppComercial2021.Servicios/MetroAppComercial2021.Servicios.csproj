@@ -45,21 +45,32 @@
     <Compile Include="CajasServicios.cs" />
     <Compile Include="ChocolatesServicios.cs" />
     <Compile Include="ClientesServicios.cs" />
+    <Compile Include="EmpleadosServicios.cs" />
     <Compile Include="Facades\IBombonesServicios.cs" />
     <Compile Include="Facades\ICajasServicios.cs" />
     <Compile Include="Facades\IChocolatesServicios.cs" />
     <Compile Include="Facades\IClientesServicios.cs" />
+    <Compile Include="Facades\IEmpleadosServicios.cs" />
     <Compile Include="Facades\ILocalidadesServicios.cs" />
+    <Compile Include="Facades\IMenusServicios.cs" />
+    <Compile Include="Facades\INoPermisosServicios.cs" />
     <Compile Include="Facades\INuecesServicios.cs" />
+    <Compile Include="Facades\IPermisosServicios.cs" />
     <Compile Include="Facades\IProveedoresServicios.cs" />
     <Compile Include="Facades\IProvinciasServicios.cs" />
     <Compile Include="Facades\IRellenosServicios.cs" />
+    <Compile Include="Facades\IRolesServicios.cs" />
+    <Compile Include="Facades\IUsuariosServicios.cs" />
     <Compile Include="LocalidadesServicios.cs" />
+    <Compile Include="NoPermisosServicios.cs" />
     <Compile Include="NuecesServicios.cs" />
+    <Compile Include="PermisosServicios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedoresServicios.cs" />
     <Compile Include="ProvinciasServicios.cs" />
     <Compile Include="RellenosServicios.cs" />
+    <Compile Include="RolesServicios.cs" />
+    <Compile Include="UsuariosServicios.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

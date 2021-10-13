@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 using MetroAppComercial2021.Datos.Comun.UnitOfWork;
 using MetroAppComercial2021.Datos.Sql.UnitOfWork;
 using MetroAppComercial2021.Entidades.Entidades;
@@ -28,11 +29,31 @@ namespace MetroAppComercial2021.Windows.FormChocolates
         private IUnitOfWork _unitOfWork;
         private IChocolatesServicios _servicio;
         private List<TipoChocolate> lista;
+        private Usuario usuario;
+
+        public void SetUsuario(Usuario usuario)
+        {
+            this.usuario = usuario;
+        }
+
+        public void VerficarPermisos()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is IconButton)
+                {
+                    var opcion = (string) ((IconButton) control).Tag;
+                    ((IconButton)control).Enabled = usuario.TienePermiso(opcion);
+
+                }
+            }
+        }
         private void FrmChocolates_Load(object sender, EventArgs e)
         {
             _unitOfWork = new UnitOfWorkSql();
             _servicio = new ChocolatesServicios(_unitOfWork);
             RecargarGrilla();
+            VerficarPermisos();
         }
 
         private void RecargarGrilla()

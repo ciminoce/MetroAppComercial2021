@@ -139,9 +139,6 @@
   <data name="dessert_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dessert_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gift_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gift_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="stock_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stock_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,14 +148,20 @@
   <data name="city_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\city_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shutdown_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdown_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="low_price_pound_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\low_price_pound_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blackberry_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blackberry_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shutdown_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdown_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gift_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gift_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nut_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nut_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,13 +178,16 @@
   <data name="low_price_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\low_price_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ingreso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ingreso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="level_up_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\level_up_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="phone_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phone_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buying_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buying_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

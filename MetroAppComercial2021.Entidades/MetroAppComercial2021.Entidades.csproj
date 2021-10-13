@@ -45,14 +45,20 @@
     <Compile Include="Entidades\Caja.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\DetalleCaja.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Localidad.cs" />
+    <Compile Include="Entidades\Menu.cs" />
+    <Compile Include="Entidades\NoPermisoRol.cs" />
+    <Compile Include="Entidades\Permiso.cs" />
     <Compile Include="Entidades\Persona.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Provincia.cs" />
+    <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\TipoChocolate.cs" />
     <Compile Include="Entidades\TipoNuez.cs" />
     <Compile Include="Entidades\TipoRelleno.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

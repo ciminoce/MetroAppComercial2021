@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 using MetroAppComercial2021.Datos.Comun.UnitOfWork;
 using MetroAppComercial2021.Datos.Sql.UnitOfWork;
 using MetroAppComercial2021.Entidades.Entidades;
@@ -15,6 +16,7 @@ using MetroAppComercial2021.Servicios.Facades;
 using MetroAppComercial2021.Windows.Excepciones;
 using MetroAppComercial2021.Windows.Helpers;
 using MetroFramework;
+using MetroFramework.Controls;
 
 namespace MetroAppComercial2021.Windows.FormRellenos
 {
@@ -33,12 +35,37 @@ namespace MetroAppComercial2021.Windows.FormRellenos
         private IRellenosServicios _servicio;
         private IUnitOfWork _unitOfWork;
         private List<TipoRelleno> rellenos;
+        private Usuario usuario;
 
+        public void SetUsuario(Usuario usuario)
+        {
+            this.usuario = usuario;
+        }
         private void FrmRellenos_Load(object sender, EventArgs e)
         {
             _unitOfWork = new UnitOfWorkSql();
             _servicio = new RellenosServicios(_unitOfWork);
             RecargarGrillaRellenos();
+            VerificarPermisos();
+        }
+
+        private void VerificarPermisos()
+        {
+            //Si el usuario es administrador 
+            //no chequeo nada y me voy
+            if (usuario.Rol.NombreRol == "Administrador")
+            {
+                return;
+            }
+
+            foreach (var control in this.Controls)
+            {
+                if (control is IconButton)
+                {
+                    string opcionTile = (string)((IconButton)control).Tag;
+                    ((IconButton)control).Enabled = usuario.TienePermiso(opcionTile);
+                }
+            }
 
         }
 

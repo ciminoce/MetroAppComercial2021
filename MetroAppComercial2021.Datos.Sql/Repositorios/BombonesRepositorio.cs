@@ -16,6 +16,7 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
     public class BombonesRepositorio:DbHelperSql,IBombonesRepositorio
     {
         private readonly string tabla = "Bombones";
+        private List<Bombon> lista;
         public BombonesRepositorio(SqlConnection context, SqlTransaction transaction)
         {
             this._context = context;
@@ -26,7 +27,7 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
         {
             try
             {
-                List<Bombon> lista = new List<Bombon>();
+                //List<Bombon> lista = new List<Bombon>();
                 string cadenaComando = "SELECT BombonId, NombreBombon, TipoChocolateId, TipoNuezId, TipoRellenoId, Descripcion," +
                                        " PrecioCosto, PrecioVenta, CantidadEnExistencia, CantidadEnPedido," +
                                        " NivelDeReposicion, Suspendido, Imagen, RowVersion  " +

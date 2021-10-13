@@ -69,6 +69,25 @@ namespace MetroAppComercial2021.Windows.Helpers
                 r.Cells[1].Value = ((DetalleCaja)obj).Cantidad;
 
             }
+            else if (obj is Empleado)
+            {
+                r.Cells[0].Value = ((Empleado)obj).ToString();
+                r.Cells[1].Value = ((Empleado)obj).TelefonoFijo;
+                r.Cells[2].Value = ((Empleado)obj).TelefonoMovil;
+                r.Cells[3].Value = ((Empleado)obj).Mail;
+
+            }else if (obj is Rol)
+            {
+                r.Cells[0].Value = ((Rol)obj).NombreRol;
+
+            }else if (obj is Usuario)
+            {
+                r.Cells[0].Value = ((Usuario)obj).Empleado.ApeNombre;
+                r.Cells[1].Value = ((Usuario)obj).Rol.NombreRol;
+
+            }
+
+
 
             r.Tag = obj;
         }

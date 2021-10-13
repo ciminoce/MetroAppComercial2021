@@ -50,11 +50,17 @@
     <Compile Include="Repositorios\ChocolatesRepositorio.cs" />
     <Compile Include="Repositorios\ClientesRepositorio.cs" />
     <Compile Include="Repositorios\DetalleCajasRepositorio.cs" />
+    <Compile Include="Repositorios\EmpleadosRepositorio.cs" />
     <Compile Include="Repositorios\LocalidadesRepositorio.cs" />
+    <Compile Include="Repositorios\MenusRepositorio.cs" />
+    <Compile Include="Repositorios\NoPermisosRepositorio.cs" />
     <Compile Include="Repositorios\NuecesRepositorio.cs" />
+    <Compile Include="Repositorios\PermisosRepositorio.cs" />
     <Compile Include="Repositorios\ProveedoresRepositorio.cs" />
     <Compile Include="Repositorios\ProvinciasRepositorio.cs" />
     <Compile Include="Repositorios\RellenosRepositorio.cs" />
+    <Compile Include="Repositorios\RolesRepositorio.cs" />
+    <Compile Include="Repositorios\UsuariosRepositorio.cs" />
     <Compile Include="UnitOfWork\UnitOfWorkAdapterSql.cs" />
     <Compile Include="UnitOfWork\UnitOfWorkRepositoriosSql.cs" />
     <Compile Include="UnitOfWork\UnitOfWorkSql.cs" />
