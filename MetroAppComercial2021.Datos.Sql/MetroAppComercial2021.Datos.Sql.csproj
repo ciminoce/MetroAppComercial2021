@@ -61,6 +61,7 @@
     <Compile Include="Repositorios\RellenosRepositorio.cs" />
     <Compile Include="Repositorios\RolesRepositorio.cs" />
     <Compile Include="Repositorios\UsuariosRepositorio.cs" />
+    <Compile Include="Repositorios\VentasRepositorio.cs" />
     <Compile Include="UnitOfWork\UnitOfWorkAdapterSql.cs" />
     <Compile Include="UnitOfWork\UnitOfWorkRepositoriosSql.cs" />
     <Compile Include="UnitOfWork\UnitOfWorkSql.cs" />

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroAppComercial2021.Datos.Comun.UnitOfWork;
 using MetroAppComercial2021.Datos.Sql.UnitOfWork;
@@ -13,9 +7,10 @@ using MetroAppComercial2021.Entidades.Entidades;
 using MetroAppComercial2021.Servicios;
 using MetroAppComercial2021.Servicios.Facades;
 using MetroAppComercial2021.Windows.Excepciones;
+using MetroAppComercial2021.Windows.FrmEmpleados;
 using MetroAppComercial2021.Windows.Helpers;
 
-namespace MetroAppComercial2021.Windows.FrmEmpleados
+namespace MetroAppComercial2021.Windows.FormEmpleados
 {
     public partial class FrmEmpleados : MetroFramework.Forms.MetroForm
     {

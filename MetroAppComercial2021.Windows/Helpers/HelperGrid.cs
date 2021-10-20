@@ -85,6 +85,14 @@ namespace MetroAppComercial2021.Windows.Helpers
                 r.Cells[0].Value = ((Usuario)obj).Empleado.ApeNombre;
                 r.Cells[1].Value = ((Usuario)obj).Rol.NombreRol;
 
+            }else if (obj is Venta)
+            {
+                r.Cells[0].Value = ((Venta)obj).VentaId;
+                r.Cells[1].Value = ((Venta)obj).Cliente.ApeNombre;
+                r.Cells[2].Value = ((Venta)obj).FechaVenta.ToShortDateString();
+                r.Cells[3].Value = ((Venta)obj).Regalo;
+                r.Cells[4].Value = ((Venta) obj).Total;
+
             }
 
 

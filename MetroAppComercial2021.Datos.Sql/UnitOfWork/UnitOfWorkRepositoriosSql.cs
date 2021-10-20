@@ -31,6 +31,7 @@ namespace MetroAppComercial2021.Datos.Sql.UnitOfWork
             menusRepositorio = new MenusRepositorio(context, transaction);
             permisosRepositorio = new PermisosRepositorio(context, transaction);
             noPermisosRepositorio = new NoPermisosRepositorio(context, transaction);
+            ventasRepositorio = new VentasRepositorio(context, transaction);
         }
 
         public IRellenosRepositorio rellenosRepositorio { get; }
@@ -49,5 +50,6 @@ namespace MetroAppComercial2021.Datos.Sql.UnitOfWork
         public IPermisosRepositorio permisosRepositorio { get; }
         public IMenusRepositorio menusRepositorio { get; }
         public INoPermisosRepositorio noPermisosRepositorio { get; }
+        public IVentasRepositorio ventasRepositorio { get; }
     }
 }

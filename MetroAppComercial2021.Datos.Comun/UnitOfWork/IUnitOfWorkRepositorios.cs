@@ -20,5 +20,6 @@ namespace MetroAppComercial2021.Datos.Comun.UnitOfWork
         IPermisosRepositorio permisosRepositorio { get; }
         IMenusRepositorio menusRepositorio { get; }
         INoPermisosRepositorio noPermisosRepositorio { get; }
+        IVentasRepositorio ventasRepositorio { get; }
     }
 }

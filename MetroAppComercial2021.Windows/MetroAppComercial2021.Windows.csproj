@@ -168,17 +168,29 @@
     <Compile Include="FormRoles\FrmRolesEdit.Designer.cs">
       <DependentUpon>FrmRolesEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEmpleados\FrmEmpleados.cs">
+    <Compile Include="FormEmpleados\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEmpleados\FrmEmpleados.Designer.cs">
+    <Compile Include="FormEmpleados\FrmEmpleados.Designer.cs">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEmpleados\FrmEmpleadosEdit.cs">
+    <Compile Include="FormEmpleados\FrmEmpleadosEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEmpleados\FrmEmpleadosEdit.Designer.cs">
+    <Compile Include="FormEmpleados\FrmEmpleadosEdit.Designer.cs">
       <DependentUpon>FrmEmpleadosEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentas\FrmBuscarVentasCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas\FrmBuscarVentasCliente.Designer.cs">
+      <DependentUpon>FrmBuscarVentasCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentas\FrmBuscarVentasFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas\FrmBuscarVentasFecha.Designer.cs">
+      <DependentUpon>FrmBuscarVentasFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -198,23 +210,29 @@
     <Compile Include="FormProvincias\FrmProvinciasEdit.Designer.cs">
       <DependentUpon>FrmProvinciasEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTareas\FrmLogin.cs">
+    <Compile Include="FormTareas\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTareas\FrmLogin.Designer.cs">
+    <Compile Include="FormTareas\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuarios\FrmUsuarios.cs">
+    <Compile Include="FormUsuarios\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarios\FrmUsuarios.Designer.cs">
+    <Compile Include="FormUsuarios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuarios\FrmUsuariosEdit.cs">
+    <Compile Include="FormUsuarios\FrmUsuariosEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarios\FrmUsuariosEdit.Designer.cs">
+    <Compile Include="FormUsuarios\FrmUsuariosEdit.Designer.cs">
       <DependentUpon>FrmUsuariosEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentas\FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas\FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HelperCalculos.cs" />
     <Compile Include="Helpers\HelperCombo.cs" />
@@ -290,11 +308,20 @@
     <EmbeddedResource Include="FormRoles\FrmRolesEdit.resx">
       <DependentUpon>FrmRolesEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmpleados\FrmEmpleados.resx">
+    <EmbeddedResource Include="FormEmpleados\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmpleados\FrmEmpleadosEdit.resx">
+    <EmbeddedResource Include="FormEmpleados\FrmEmpleadosEdit.resx">
       <DependentUpon>FrmEmpleadosEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas\FrmBuscarVentasCliente.resx">
+      <DependentUpon>FrmBuscarVentasCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas\FrmBuscarVentasFecha.resx">
+      <DependentUpon>FrmBuscarVentasFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas\FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -305,13 +332,13 @@
     <EmbeddedResource Include="FormProvincias\FrmProvinciasEdit.resx">
       <DependentUpon>FrmProvinciasEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTareas\FrmLogin.resx">
+    <EmbeddedResource Include="FormTareas\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarios\FrmUsuarios.resx">
+    <EmbeddedResource Include="FormUsuarios\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarios\FrmUsuariosEdit.resx">
+    <EmbeddedResource Include="FormUsuarios\FrmUsuariosEdit.resx">
       <DependentUpon>FrmUsuariosEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Localidades\FrmLocalidades.resx">
@@ -434,5 +461,6 @@
   <ItemGroup>
     <None Include="Resources\buying_48px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

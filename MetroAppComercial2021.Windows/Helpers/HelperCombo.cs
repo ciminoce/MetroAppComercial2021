@@ -140,5 +140,23 @@ namespace MetroAppComercial2021.Windows.Helpers
             combo.ValueMember = "RolId";
             combo.SelectedIndex = 0;
         }
+
+        public static void CargarDatosComboClientes(ref MetroComboBox combo)
+        {
+            IUnitOfWork _unitOfWork = new UnitOfWorkSql();
+            List<Cliente> lista = new ClientesServicios(_unitOfWork).GetLista();
+            Cliente defaultCliente = new Cliente()
+            {
+                Id = 0,
+                Apellido = "<Seleccione ",
+                Nombres = "Cliente>"
+
+            };
+            lista.Insert(0, defaultCliente);
+            combo.DataSource = lista;
+            combo.DisplayMember = "ApeNombre";
+            combo.ValueMember = "Id";
+            combo.SelectedIndex = 0;
+        }
     }
 }

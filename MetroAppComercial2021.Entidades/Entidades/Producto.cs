@@ -19,6 +19,5 @@ namespace MetroAppComercial2021.Entidades.Entidades
         public bool Suspendido { get; set; }
         public string Imagen { get; set; }
         public byte[] RowVersion { get; set; }
-
     }
 }

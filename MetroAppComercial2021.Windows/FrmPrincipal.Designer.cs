@@ -67,7 +67,7 @@ namespace MetroAppComercial2021.Windows
             this.VentasMetroTile.UseCustomForeColor = true;
             this.VentasMetroTile.UseSelectable = true;
             this.VentasMetroTile.UseTileImage = true;
-            this.VentasMetroTile.Click += new System.EventHandler(this.CajaMetroTile_Click);
+            this.VentasMetroTile.Click += new System.EventHandler(this.VentasMetroTile_Click);
             // 
             // CajaMetroTile
             // 

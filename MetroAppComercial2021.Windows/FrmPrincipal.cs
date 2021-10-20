@@ -17,6 +17,7 @@ using MetroAppComercial2021.Windows.FormProveedores;
 using MetroAppComercial2021.Windows.FormRellenos;
 using MetroAppComercial2021.Windows.FormProvincias;
 using MetroAppComercial2021.Windows.FormRoles;
+using MetroAppComercial2021.Windows.FormVentas;
 using MetroAppComercial2021.Windows.FrmTareas;
 using MetroAppComercial2021.Windows.Localidades;
 using MetroFramework.Controls;
@@ -100,7 +101,7 @@ namespace MetroAppComercial2021.Windows
 
         private void EmpmleadosMetroTile_Click(object sender, EventArgs e)
         {
-            FrmEmpleados.FrmEmpleados frm = new FrmEmpleados.FrmEmpleados();
+            FormEmpleados.FrmEmpleados frm = new FormEmpleados.FrmEmpleados();
             frm.ShowDialog(this);
         }
 
@@ -145,6 +146,13 @@ namespace MetroAppComercial2021.Windows
         public void SetUsuario(Usuario usuario)
         {
             this.usuario = usuario;
+        }
+
+        private void VentasMetroTile_Click(object sender, EventArgs e)
+        {
+            FrmVentas frm = new FrmVentas();
+            frm.SetUsuario(usuario);
+            frm.ShowDialog(this);
         }
     }
 }

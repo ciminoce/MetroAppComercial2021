@@ -70,7 +70,33 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
 
         public Cliente GetPorId(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Cliente cliente=null;
+                string cadenaComando = "SELECT ClienteId, Apellido, Nombres, Direccion," +
+                                       " ProvinciaId, LocalidadId, CodPostal, TelefonoFijo," +
+                                       " TelefonoMovil, Mail, RowVersion  " +
+                                       "FROM Clientes WHERE ClienteId=@id";
+                using (var comando = (SqlCommand)CreateCommand(cadenaComando))
+                {
+                    comando.Parameters.AddWithValue("@id", id);
+                    using (var reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            cliente = ConstruirCliente(reader);
+                            
+                        }
+                    }
+                }
+
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+                throw DbExceptionManager.GettingException(tabla);
+            }
+
         }
 
         public int Agregar(Cliente obj)

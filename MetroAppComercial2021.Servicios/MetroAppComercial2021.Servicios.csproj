@@ -61,6 +61,7 @@
     <Compile Include="Facades\IRellenosServicios.cs" />
     <Compile Include="Facades\IRolesServicios.cs" />
     <Compile Include="Facades\IUsuariosServicios.cs" />
+    <Compile Include="Facades\IVentasServicios.cs" />
     <Compile Include="LocalidadesServicios.cs" />
     <Compile Include="NoPermisosServicios.cs" />
     <Compile Include="NuecesServicios.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="RellenosServicios.cs" />
     <Compile Include="RolesServicios.cs" />
     <Compile Include="UsuariosServicios.cs" />
+    <Compile Include="VentasServicios.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

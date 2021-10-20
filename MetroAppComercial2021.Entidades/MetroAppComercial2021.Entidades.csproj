@@ -45,6 +45,7 @@
     <Compile Include="Entidades\Caja.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\DetalleCaja.cs" />
+    <Compile Include="Entidades\DetalleVenta.cs" />
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Localidad.cs" />
     <Compile Include="Entidades\Menu.cs" />
@@ -57,8 +58,10 @@
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\TipoChocolate.cs" />
     <Compile Include="Entidades\TipoNuez.cs" />
+    <Compile Include="Entidades\TipoProducto.cs" />
     <Compile Include="Entidades\TipoRelleno.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

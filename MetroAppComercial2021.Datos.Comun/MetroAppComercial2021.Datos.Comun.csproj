@@ -62,6 +62,7 @@
     <Compile Include="Repositorios\IRepositorio.cs" />
     <Compile Include="Repositorios\IRolesRepositorio.cs" />
     <Compile Include="Repositorios\IUsuariosRepositorio.cs" />
+    <Compile Include="Repositorios\IVentasRepositorio.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="UnitOfWork\IUnitOfWorkAdapter.cs" />
     <Compile Include="UnitOfWork\IUnitOfWorkRepositorios.cs" />

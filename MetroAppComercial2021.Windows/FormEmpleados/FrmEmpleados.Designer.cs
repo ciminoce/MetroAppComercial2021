@@ -1,5 +1,5 @@
 ﻿
-namespace MetroAppComercial2021.Windows.FrmEmpleados
+namespace MetroAppComercial2021.Windows.FormEmpleados
 {
     partial class FrmEmpleados
     {

@@ -12,5 +12,7 @@ namespace MetroAppComercial2021.Entidades.Entidades
         {
             return $"{Apellido.ToUpper()}, {Nombres}";
         }
+
+        public string ApeNombre => $"{Apellido} {Nombres}";
     }
 }
