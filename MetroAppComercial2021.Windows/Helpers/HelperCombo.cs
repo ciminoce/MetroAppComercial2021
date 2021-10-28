@@ -158,5 +158,21 @@ namespace MetroAppComercial2021.Windows.Helpers
             combo.ValueMember = "Id";
             combo.SelectedIndex = 0;
         }
+
+        public static void CargarDatosComboCajas(ref MetroComboBox combo)
+        {
+            IUnitOfWork _unitOfWork = new UnitOfWorkSql();
+            List<Caja> lista = new CajasServicios(_unitOfWork).GetLista();
+            Caja defaultCaja = new Caja()
+            {
+                Id = 0,
+                NombreProducto = "<Seleccione Caja>",
+            };
+            lista.Insert(0, defaultCaja);
+            combo.DataSource = lista;
+            combo.DisplayMember = "NombreProducto";
+            combo.ValueMember = "Id";
+            combo.SelectedIndex = 0;
+        }
     }
 }

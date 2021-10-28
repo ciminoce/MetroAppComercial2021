@@ -14,7 +14,7 @@ namespace MetroAppComercial2021.Datos.Comun.Repositorios
         List<Venta> GetLista(int clienteId, int registros, int paginaActual);
         List<Venta> GetLista(DateTime fechaVenta, int registros, int paginaActual);
         Venta GetVentaPorId(int ventaId);
-        void Agregar(Venta venta);
+        int Agregar(Venta venta);
 
         int GetCantidad();
         int GetCantidad(int clienteId);

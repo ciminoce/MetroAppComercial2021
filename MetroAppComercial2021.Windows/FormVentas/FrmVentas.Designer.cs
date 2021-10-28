@@ -401,6 +401,7 @@ namespace MetroAppComercial2021.Windows.FormVentas
             this.NuevoIconButton.Size = new System.Drawing.Size(50, 50);
             this.NuevoIconButton.TabIndex = 70;
             this.NuevoIconButton.UseVisualStyleBackColor = true;
+            this.NuevoIconButton.Click += new System.EventHandler(this.NuevoIconButton_Click_1);
             // 
             // FrmVentas
             // 

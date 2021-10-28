@@ -50,6 +50,7 @@
     <Compile Include="Repositorios\IChocolatesRepositorio.cs" />
     <Compile Include="Repositorios\IClientesRepositorio.cs" />
     <Compile Include="Repositorios\IDetalleCajasRepositorio.cs" />
+    <Compile Include="Repositorios\IDetalleVentasRepositorio.cs" />
     <Compile Include="Repositorios\IEmpleadosRepositorio.cs" />
     <Compile Include="Repositorios\ILocalidadesRepositorio.cs" />
     <Compile Include="Repositorios\IMenusRepositorio.cs" />

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\CarritoDeDetalles.cs" />
+    <Compile Include="Classes\CarritoDeVentas.cs" />
     <Compile Include="Excepciones\GuiMessageManager.cs" />
     <Compile Include="FormBombones\FrmBombones.cs">
       <SubType>Form</SubType>
@@ -192,6 +193,12 @@
     <Compile Include="FormVentas\FrmBuscarVentasFecha.Designer.cs">
       <DependentUpon>FrmBuscarVentasFecha.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVentas\FrmVentasEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas\FrmVentasEdit.Designer.cs">
+      <DependentUpon>FrmVentasEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVentas\FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas\FrmVentasEdit.resx">
+      <DependentUpon>FrmVentasEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

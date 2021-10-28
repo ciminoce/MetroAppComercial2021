@@ -342,5 +342,30 @@ namespace MetroAppComercial2021.Windows.FormVentas
             lista = _servicio.GetLista(fecha, cantidadPorPagina, paginaActual);
             MostrarDatosEnGrilla();
         }
+
+        private void NuevoIconButton_Click_1(object sender, EventArgs e)
+        {
+            FrmVentasEdit frm = new FrmVentasEdit(){Text = "Nueva Venta"};
+            DialogResult dr = frm.ShowDialog(this);
+            if (dr==DialogResult.Cancel)
+            {
+                return;
+            }
+
+            try
+            {
+                var venta = frm.GetVenta();
+                _servicio.Agregar(venta);
+                var r=HelperGrid.ConstruirFila(DatosMetroGrid);
+                HelperGrid.SetearFila(r,venta);
+                HelperGrid.AgregarFila(DatosMetroGrid,r);
+                HelperMessageBox.Message(this, "Venta Agregada","Mensaje", MessageType.Information);
+            }
+            catch (Exception exception)
+            {
+                HelperMessageBox.Message(this, exception.Message,"Error", MessageType.Error);
+            }
+
+        }
     }
 }

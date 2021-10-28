@@ -27,11 +27,11 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
         {
             try
             {
-                //List<Bombon> lista = new List<Bombon>();
+                List<Bombon> lista = new List<Bombon>();
                 string cadenaComando = "SELECT BombonId, NombreBombon, TipoChocolateId, TipoNuezId, TipoRellenoId, Descripcion," +
                                        " PrecioCosto, PrecioVenta, CantidadEnExistencia, CantidadEnPedido," +
                                        " NivelDeReposicion, Suspendido, Imagen, RowVersion  " +
-                                       "FROM Bombones ORDER BY NombreBombon";
+                                       "FROM Bombones WHERE Suspendido=0 ORDER BY NombreBombon";
                 using (var comando = CreateCommand(cadenaComando))
                 {
                     using (var reader = comando.ExecuteReader())
@@ -345,6 +345,39 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
             catch (Exception ex)
             {
                 throw DbExceptionManager.GettingException(tabla);
+            }
+        }
+
+        public int ActualizarStock(Producto producto, int cantidad)
+        {
+            try
+            {
+                int registrosAfectados = 0;
+                string cadenaComando = "UPDATE Bombones SET CantidadEnExistencia=CantidadEnExistencia-@cantidad" +
+                                       " WHERE BombonId=@id AND RowVersion=@rov";
+                using (var comando = (SqlCommand)CreateCommand(cadenaComando))
+                {
+                    comando.Parameters.AddWithValue("@cantidad", cantidad);
+                    comando.Parameters.AddWithValue("@id",producto.Id);
+                    comando.Parameters.AddWithValue("@rov", producto.RowVersion);
+
+                    registrosAfectados = comando.ExecuteNonQuery();
+                    if (registrosAfectados > 0)
+                    {
+                        cadenaComando = "SELECT RowVersion FROM Bombones WHERE BombonId=@id";
+                        using (var comandoRow = (SqlCommand)CreateCommand(cadenaComando))
+                        {
+                            comandoRow.Parameters.AddWithValue("@id", producto.Id);
+                            producto.RowVersion = (byte[])comandoRow.ExecuteScalar();
+                        }
+                    }
+                }
+
+                return registrosAfectados;
+            }
+            catch (Exception ex)
+            {
+                throw DbExceptionManager.InsertException(tabla);
             }
         }
     }

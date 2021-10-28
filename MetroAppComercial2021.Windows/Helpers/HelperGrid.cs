@@ -93,6 +93,14 @@ namespace MetroAppComercial2021.Windows.Helpers
                 r.Cells[3].Value = ((Venta)obj).Regalo;
                 r.Cells[4].Value = ((Venta) obj).Total;
 
+            }else if (obj is DetalleVenta)
+            {
+                r.Cells[0].Value = ((DetalleVenta)obj).Producto.NombreProducto;
+                r.Cells[1].Value = ((DetalleVenta)obj).TipoProducto.ToString();
+                r.Cells[2].Value = ((DetalleVenta)obj).Precio;
+                r.Cells[3].Value = ((DetalleVenta)obj).Cantidad;
+                r.Cells[4].Value = ((DetalleVenta)obj).Cantidad*((DetalleVenta)obj).Precio;
+
             }
 
 

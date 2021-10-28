@@ -137,9 +137,46 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
             throw new NotImplementedException();
         }
 
-        public void Agregar(Venta venta)
+        public int Agregar(Venta venta)
         {
-            throw new NotImplementedException();
+            try
+            {
+                int registrosAfectados = 0;
+                string cadenaComando = "INSERT INTO Ventas (ClienteId, FechaVenta, Regalo, Total)" +
+                                       " VALUES (@cli, @fec, @reg, @tot)";
+                using (var comando = (SqlCommand)CreateCommand(cadenaComando))
+                {
+                    comando.Parameters.AddWithValue("@cli", venta.ClienteId);
+
+                    comando.Parameters.AddWithValue("@fec", venta.FechaVenta);
+                    comando.Parameters.AddWithValue("@reg", venta.Regalo);
+                    comando.Parameters.AddWithValue("@tot", venta.Total);
+
+                    registrosAfectados = comando.ExecuteNonQuery();
+                    if (registrosAfectados > 0)
+                    {
+                        string cadenaOutput = "SELECT @@IDENTITY";
+                        using (var comandoOutput = CreateCommand(cadenaOutput))
+                        {
+                            venta.VentaId= (int)(decimal)comandoOutput.ExecuteScalar();
+                        }
+                        cadenaComando = "SELECT RowVersion FROM Ventas WHERE VentaId=@id";
+                        using (var comandoRow = (SqlCommand)CreateCommand(cadenaComando))
+                        {
+                            comandoRow.Parameters.AddWithValue("@id", venta.VentaId);
+                            venta.RowVersion = (byte[])comandoRow.ExecuteScalar();
+                        }
+
+                    }
+                }
+
+                return registrosAfectados;
+            }
+            catch (Exception ex)
+            {
+                throw DbExceptionManager.InsertException(tabla);
+            }
+
         }
 
         public int GetCantidad()

@@ -98,9 +98,34 @@ namespace MetroAppComercial2021.Servicios
             throw new NotImplementedException();
         }
 
-        public void Agregar(Venta venta)
+        public int Agregar(Venta venta)
         {
-            throw new NotImplementedException();
+            try
+            {
+                int registrosAfectados = 0;
+                using (var context = _unitOfWork.Create())
+                {
+                    registrosAfectados = context.repositorios.ventasRepositorio.Agregar(venta);
+                    foreach (var detalleVta in venta.DetalleVentas)
+                    {
+                        detalleVta.VentaId = venta.VentaId;
+                        registrosAfectados = context.repositorios.detalleVentasRepositorio.Agregar(detalleVta);
+                        if (detalleVta.TipoProducto==TipoProducto.Bombon)
+                        {
+                            registrosAfectados =
+                                context.repositorios.bombonesRepositorio.ActualizarStock(detalleVta.Producto,
+                                    detalleVta.Cantidad);
+                        }
+                    }
+                    context.SaveChanges();
+                }
+
+                return registrosAfectados;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public int GetCantidad()
