@@ -299,6 +299,7 @@ namespace MetroAppComercial2021.Windows.FormVentas
             this.DetalleIconButton.Size = new System.Drawing.Size(50, 50);
             this.DetalleIconButton.TabIndex = 73;
             this.DetalleIconButton.UseVisualStyleBackColor = true;
+            this.DetalleIconButton.Click += new System.EventHandler(this.DetalleIconButton_Click);
             // 
             // ActualizarIconButton
             // 

@@ -36,9 +36,6 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
                     comando.Parameters.AddWithValue("@cant", detalleVta.Cantidad);
                     comando.Parameters.AddWithValue("@pre", detalleVta.Precio);
 
-
-
-
                     registrosAfectados = comando.ExecuteNonQuery();
                     if (registrosAfectados > 0)
                     {
@@ -64,6 +61,46 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
                 throw DbExceptionManager.InsertException(tabla);
             }
 
+        }
+
+        public List<DetalleVenta> GetVentaDetalle(int ventaId)
+        {
+            try
+            {
+                List<DetalleVenta> lista = new List<DetalleVenta>();
+                string cadenaComando = "SELECT ProductoId, TipoProductoId, Cantidad, Precio FROM DetallesVentas WHERE VentaId=@id";
+                using (var comando = (SqlCommand)CreateCommand(cadenaComando))
+                {
+                    comando.Parameters.AddWithValue("@id", ventaId);
+                    using (var reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var detalle = ConstruirDetalleVenta(reader);
+                            lista.Add(detalle);
+                        }
+                    }
+                }
+
+                return lista;
+
+            }
+            catch (Exception ex)
+            {
+                throw DbExceptionManager.InsertException(tabla);
+            }
+
+        }
+
+        private DetalleVenta ConstruirDetalleVenta(SqlDataReader reader)
+        {
+            return new DetalleVenta()
+            {
+                ProductoId = reader.GetInt32(0),
+                TipoProducto = (TipoProducto) reader.GetInt32(1),
+                Cantidad = reader.GetInt32(2),
+                Precio = reader.GetDecimal(3)
+            };
         }
     }
 }

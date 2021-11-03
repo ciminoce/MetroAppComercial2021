@@ -10,5 +10,6 @@ namespace MetroAppComercial2021.Datos.Comun.Repositorios
     public interface IDetalleVentasRepositorio
     {
         int Agregar(DetalleVenta detalleVta);
+        List<DetalleVenta> GetVentaDetalle(int ventaId);
     }
 }

@@ -19,5 +19,6 @@ namespace MetroAppComercial2021.Servicios.Facades
         int GetCantidad();
         int GetCantidad(int clienteId);
         int GetCantidad(DateTime fechaBusqueda);
+        List<DetalleVenta> GetVentaDetalle(int ventaId);
     }
 }

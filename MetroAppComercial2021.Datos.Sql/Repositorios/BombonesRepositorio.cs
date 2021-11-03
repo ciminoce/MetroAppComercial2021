@@ -377,7 +377,7 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
             }
             catch (Exception ex)
             {
-                throw DbExceptionManager.InsertException(tabla);
+                throw DbExceptionManager.UpdateException(tabla);
             }
         }
     }

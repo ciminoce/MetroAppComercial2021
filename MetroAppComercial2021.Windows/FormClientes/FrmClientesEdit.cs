@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroAppComercial2021.Datos.Comun.Excepciones;
+using MetroAppComercial2021.Datos.Comun.UnitOfWork;
+using MetroAppComercial2021.Datos.Sql.UnitOfWork;
 using MetroAppComercial2021.Entidades.Entidades;
+using MetroAppComercial2021.Servicios;
 using MetroAppComercial2021.Servicios.Facades;
 using MetroAppComercial2021.Windows.Excepciones;
+using MetroAppComercial2021.Windows.FormProvincias;
 using MetroAppComercial2021.Windows.Helpers;
+using MetroAppComercial2021.Windows.Localidades;
 
 namespace MetroAppComercial2021.Windows.FormClientes
 {
@@ -27,7 +32,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
         private Cliente cliente;
         private Provincia provincia;
         private Localidad localidad;
-
+        private IUnitOfWork _unitOfWork;
         private bool esEdicion = false;
         protected override void OnLoad(EventArgs e)
         {
@@ -184,6 +189,62 @@ namespace MetroAppComercial2021.Windows.FormClientes
         public void SetCliente(Cliente cliente)
         {
             this.cliente = cliente;
+        }
+        private IProvinciasServicios _servicioProvincias;
+        private void NuevaProvinciaIconButton_Click(object sender, EventArgs e)
+        {
+            _unitOfWork = new UnitOfWorkSql();
+            _servicioProvincias = new ProvinciasServicios(_unitOfWork);
+            FrmProvinciasEdit frmProvincia = new FrmProvinciasEdit() {Text = "Agregar Provincia"};
+            DialogResult dr = frmProvincia.ShowDialog(this);
+            if (dr==DialogResult.OK)
+            {
+                try
+                {
+                    Provincia p = frmProvincia.GetProvincia();
+                    if (!_servicioProvincias.Existe(p))
+                    {
+                        _servicioProvincias.Agregar(p);
+                        //
+                        _unitOfWork = null;
+                        _servicioProvincias = null;
+                        HelperCombo.CargarDatosComboProvincias(ref ProvinciasMetroComboBox);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    HelperMessageBox.Message(this, exception.Message, "Error", MessageType.Error);
+                }
+            }
+        }
+        private ILocalidadesServicios _servicioLocalidades;
+        private void NuevaLocalidadIconButton_Click(object sender, EventArgs e)
+        {
+            _unitOfWork = new UnitOfWorkSql();
+            _servicioLocalidades = new LocalidadesServicios(_unitOfWork);
+            FrmLocalidadesEdit frmLocalidad = new FrmLocalidadesEdit() { Text = "Agregar Localidad" };
+            frmLocalidad.SetProvincia(provincia);
+            DialogResult dr = frmLocalidad.ShowDialog(this);
+            if (dr == DialogResult.OK)
+            {
+                try
+                {
+                    Localidad l = frmLocalidad.GetLocalidad();
+                    if (!_servicioLocalidades.Existe(l))
+                    {
+                        _servicioLocalidades.Agregar(l);
+                        //
+                        _unitOfWork = null;
+                        _servicioLocalidades = null;
+                        HelperCombo.CargarDatosComboLocalidades(ref LocalidadMetroComboBox, provincia.ProvinciaId);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    HelperMessageBox.Message(this, exception.Message, "Error", MessageType.Error);
+                }
+            }
+
         }
     }
 }

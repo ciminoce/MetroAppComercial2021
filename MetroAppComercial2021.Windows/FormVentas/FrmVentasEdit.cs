@@ -31,6 +31,7 @@ namespace MetroAppComercial2021.Windows.FormVentas
             HelperCombo.CargarDatosComboClientes(ref ClientesMetroComboBox);
             HelperCombo.CargarDatosComboBombones(ref BombonesMetroComboBox);
             HelperCombo.CargarDatosComboCajas(ref CajasMetroComboBox);
+            CarritoDeVentas.GetInstancia().VaciarCarrito();
         }
 
         private void ClientesMetroComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,6 +131,7 @@ namespace MetroAppComercial2021.Windows.FormVentas
             {
                 var detalleVta = new DetalleVenta()
                 {
+                    ProductoId=producto.Id,
                     Producto = producto,
                     Precio = producto.PrecioVenta,
                     Cantidad = (int) CantidadNumericUpDown.Value,
@@ -189,6 +191,7 @@ namespace MetroAppComercial2021.Windows.FormVentas
                 venta = new Venta()
                 {
                     ClienteId = cliente.Id,
+                    Cliente=cliente,
                     FechaVenta = FechaMetroDateTime.Value.Date,
                     Total = CarritoDeVentas.GetInstancia().GetTotal(),
                     Regalo = RegaloMetroCheckBox.Checked,

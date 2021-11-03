@@ -15,6 +15,6 @@ namespace MetroAppComercial2021.Entidades.Entidades
         public decimal Total { get; set; }
         public byte[] RowVersion { get; set; }
         public Cliente Cliente { get; set; }
-        public List<DetalleVenta> DetalleVentas { get; set; }
+        public List<DetalleVenta> DetalleVentas { get; set; } = new List<DetalleVenta>();
     }
 }

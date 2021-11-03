@@ -201,26 +201,30 @@ namespace MetroAppComercial2021.Windows.FormVentas
 
         private void DetalleIconButton_Click(object sender, EventArgs e)
         {
-            //if (DatosMetroGrid.SelectedRows.Count == 0)
-            //{
-            //    return;
-            //}
+            if (DatosMetroGrid.SelectedRows.Count == 0)
+            {
+                return;
+            }
 
-            //try
-            //{
-            //    var r = DatosMetroGrid.SelectedRows[0];
-            //    Venta venta = (Venta)r.Tag;
-            //    venta = _servicio.GetVentaDetalle(venta.VentaId);
-            //    FrmDetalleCajas frm = new FrmDetalleCajas();
-            //    frm.SetVenta(venta);
-            //    frm.ShowDialog(this);
+            try
+            {
+                var r = DatosMetroGrid.SelectedRows[0];
+                Venta venta = (Venta)r.Tag;
+                if (venta.DetalleVentas.Count==0)
+                {
+                    venta.DetalleVentas = _servicio.GetVentaDetalle(venta.VentaId);
 
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(exception);
-            //    throw;
-            //}
+                } 
+                FrmInfoVenta frm = new FrmInfoVenta();
+                frm.SetVenta(venta);
+                frm.ShowDialog(this);
+
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
         }
 
         public void SetUsuario(Usuario usuario)

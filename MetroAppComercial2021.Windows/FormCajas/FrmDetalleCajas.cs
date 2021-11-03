@@ -74,5 +74,10 @@ namespace MetroAppComercial2021.Windows.FormCajas
         {
 
         }
+
+        public void SetVenta(Venta venta)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

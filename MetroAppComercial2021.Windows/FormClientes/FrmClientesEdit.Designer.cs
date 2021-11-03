@@ -54,6 +54,8 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.FijoMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.ApellidoMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.NombresMetroTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.NuevaProvinciaIconButton = new FontAwesome.Sharp.IconButton();
+            this.NuevaLocalidadIconButton = new FontAwesome.Sharp.IconButton();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -84,13 +86,15 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(38, 179);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(604, 228);
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(604, 248);
             this.metroTabControl1.TabIndex = 2;
             this.metroTabControl1.UseSelectable = true;
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.NuevaLocalidadIconButton);
+            this.metroTabPage1.Controls.Add(this.NuevaProvinciaIconButton);
             this.metroTabPage1.Controls.Add(this.LocalidadMetroComboBox);
             this.metroTabPage1.Controls.Add(this.ProvinciasMetroComboBox);
             this.metroTabPage1.Controls.Add(this.metroLabel6);
@@ -104,7 +108,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(596, 186);
+            this.metroTabPage1.Size = new System.Drawing.Size(596, 206);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Domicilio";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -115,7 +119,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             // 
             this.LocalidadMetroComboBox.FormattingEnabled = true;
             this.LocalidadMetroComboBox.ItemHeight = 23;
-            this.LocalidadMetroComboBox.Location = new System.Drawing.Point(103, 138);
+            this.LocalidadMetroComboBox.Location = new System.Drawing.Point(103, 144);
             this.LocalidadMetroComboBox.Name = "LocalidadMetroComboBox";
             this.LocalidadMetroComboBox.Size = new System.Drawing.Size(383, 29);
             this.LocalidadMetroComboBox.TabIndex = 4;
@@ -136,7 +140,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(17, 141);
+            this.metroLabel6.Location = new System.Drawing.Point(17, 147);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(68, 19);
             this.metroLabel6.TabIndex = 2;
@@ -225,7 +229,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.CancelarIconButton.IconChar = FontAwesome.Sharp.IconChar.Ban;
             this.CancelarIconButton.IconColor = System.Drawing.Color.Red;
             this.CancelarIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CancelarIconButton.Location = new System.Drawing.Point(446, 413);
+            this.CancelarIconButton.Location = new System.Drawing.Point(446, 433);
             this.CancelarIconButton.Name = "CancelarIconButton";
             this.CancelarIconButton.Size = new System.Drawing.Size(99, 60);
             this.CancelarIconButton.TabIndex = 4;
@@ -237,7 +241,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.OKIconButton.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.OKIconButton.IconColor = System.Drawing.Color.Blue;
             this.OKIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.OKIconButton.Location = new System.Drawing.Point(147, 413);
+            this.OKIconButton.Location = new System.Drawing.Point(147, 433);
             this.OKIconButton.Name = "OKIconButton";
             this.OKIconButton.Size = new System.Drawing.Size(99, 60);
             this.OKIconButton.TabIndex = 3;
@@ -488,6 +492,32 @@ namespace MetroAppComercial2021.Windows.FormClientes
             this.NombresMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.NombresMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // NuevaProvinciaIconButton
+            // 
+            this.NuevaProvinciaIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NuevaProvinciaIconButton.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.NuevaProvinciaIconButton.IconColor = System.Drawing.Color.Teal;
+            this.NuevaProvinciaIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.NuevaProvinciaIconButton.Location = new System.Drawing.Point(503, 87);
+            this.NuevaProvinciaIconButton.Name = "NuevaProvinciaIconButton";
+            this.NuevaProvinciaIconButton.Size = new System.Drawing.Size(50, 50);
+            this.NuevaProvinciaIconButton.TabIndex = 72;
+            this.NuevaProvinciaIconButton.UseVisualStyleBackColor = true;
+            this.NuevaProvinciaIconButton.Click += new System.EventHandler(this.NuevaProvinciaIconButton_Click);
+            // 
+            // NuevaLocalidadIconButton
+            // 
+            this.NuevaLocalidadIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NuevaLocalidadIconButton.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.NuevaLocalidadIconButton.IconColor = System.Drawing.Color.Teal;
+            this.NuevaLocalidadIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.NuevaLocalidadIconButton.Location = new System.Drawing.Point(503, 139);
+            this.NuevaLocalidadIconButton.Name = "NuevaLocalidadIconButton";
+            this.NuevaLocalidadIconButton.Size = new System.Drawing.Size(50, 50);
+            this.NuevaLocalidadIconButton.TabIndex = 72;
+            this.NuevaLocalidadIconButton.UseVisualStyleBackColor = true;
+            this.NuevaLocalidadIconButton.Click += new System.EventHandler(this.NuevaLocalidadIconButton_Click);
+            // 
             // FrmClientesEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,5 +572,7 @@ namespace MetroAppComercial2021.Windows.FormClientes
         private FontAwesome.Sharp.IconButton CancelarIconButton;
         private FontAwesome.Sharp.IconButton OKIconButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private FontAwesome.Sharp.IconButton NuevaLocalidadIconButton;
+        private FontAwesome.Sharp.IconButton NuevaProvinciaIconButton;
     }
 }

@@ -24,6 +24,11 @@ namespace MetroAppComercial2021.Windows.Localidades
         {
             base.OnLoad(e);
             HelperCombo.CargarDatosComboProvincias(ref ProvinciasMetroComboBox);
+            if (provincia!=null)
+            {
+                ProvinciasMetroComboBox.SelectedValue = provincia.ProvinciaId;
+                ProvinciasMetroComboBox.Enabled = false;
+            }
             if (localidad!=null)
             {
                 LocalidadMetroTextBox.Text = localidad.NombreLocalidad;
@@ -80,6 +85,11 @@ namespace MetroAppComercial2021.Windows.Localidades
             }
 
             return valido;
+        }
+        private Provincia provincia;
+        public void SetProvincia(Provincia provincia)
+        {
+            this.provincia = provincia;
         }
     }
 }

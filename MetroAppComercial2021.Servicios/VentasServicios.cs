@@ -30,6 +30,10 @@ namespace MetroAppComercial2021.Servicios
                     foreach (var venta in lista)
                     {
                         venta.Cliente = context.repositorios.clientesRepositorio.GetPorId(venta.ClienteId);
+                        venta.Cliente.Provincia =
+                            context.repositorios.provinciasRepositorio.GetPorId(venta.Cliente.ProvinciaId);
+                        venta.Cliente.Localidad =
+                            context.repositorios.localidadesRepositorio.GetPorId(venta.Cliente.LocalidadId);
                     }
                 }
 
@@ -81,6 +85,10 @@ namespace MetroAppComercial2021.Servicios
                     foreach (var venta in lista)
                     {
                         venta.Cliente = context.repositorios.clientesRepositorio.GetPorId(venta.ClienteId);
+                        venta.Cliente.Provincia =
+                            context.repositorios.provinciasRepositorio.GetPorId(venta.Cliente.ProvinciaId);
+                        venta.Cliente.Localidad =
+                            context.repositorios.localidadesRepositorio.GetPorId(venta.Cliente.LocalidadId);
                     }
                 }
 
@@ -115,6 +123,13 @@ namespace MetroAppComercial2021.Servicios
                             registrosAfectados =
                                 context.repositorios.bombonesRepositorio.ActualizarStock(detalleVta.Producto,
                                     detalleVta.Cantidad);
+                        }
+                        else
+                        {
+                            registrosAfectados =
+                                context.repositorios.cajasRepositorio.ActualizarStock(detalleVta.Producto,
+                                    detalleVta.Cantidad);
+
                         }
                     }
                     context.SaveChanges();
@@ -176,6 +191,37 @@ namespace MetroAppComercial2021.Servicios
                 }
 
                 return registrosAfectados;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<DetalleVenta> GetVentaDetalle(int ventaId)
+        {
+            try
+            {
+                List<DetalleVenta> lista = new List<DetalleVenta>();
+                using (var context = _unitOfWork.Create())
+                {
+                    lista = context.repositorios.detalleVentasRepositorio.GetVentaDetalle(ventaId);
+                    foreach (var detalleVenta in lista)
+                    {
+                        if (detalleVenta.TipoProducto==TipoProducto.Bombon)
+                        {
+                            detalleVenta.Producto =
+                                context.repositorios.bombonesRepositorio.GetPorId(detalleVenta.ProductoId);
+                        }
+                        else
+                        {
+                            detalleVenta.Producto =
+                                context.repositorios.cajasRepositorio.GetPorId(detalleVenta.ProductoId);
+                        }
+                    }
+                }
+
+                return lista;
             }
             catch (Exception e)
             {

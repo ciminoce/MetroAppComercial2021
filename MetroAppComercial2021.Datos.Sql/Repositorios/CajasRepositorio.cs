@@ -336,5 +336,38 @@ namespace MetroAppComercial2021.Datos.Sql.Repositorios
                 throw DbExceptionManager.GettingException(tabla);
             }
         }
+
+        public int ActualizarStock(Producto producto, int cantidad)
+        {
+            try
+            {
+                int registrosAfectados = 0;
+                string cadenaComando = "UPDATE Cajas SET CantidadEnExistencia=CantidadEnExistencia-@cantidad" +
+                                       " WHERE CajaId=@id AND RowVersion=@rov";
+                using (var comando = (SqlCommand)CreateCommand(cadenaComando))
+                {
+                    comando.Parameters.AddWithValue("@cantidad", cantidad);
+                    comando.Parameters.AddWithValue("@id", producto.Id);
+                    comando.Parameters.AddWithValue("@rov", producto.RowVersion);
+
+                    registrosAfectados = comando.ExecuteNonQuery();
+                    if (registrosAfectados > 0)
+                    {
+                        cadenaComando = "SELECT RowVersion FROM Cajas WHERE CajaId=@id";
+                        using (var comandoRow = (SqlCommand)CreateCommand(cadenaComando))
+                        {
+                            comandoRow.Parameters.AddWithValue("@id", producto.Id);
+                            producto.RowVersion = (byte[])comandoRow.ExecuteScalar();
+                        }
+                    }
+                }
+
+                return registrosAfectados;
+            }
+            catch (Exception ex)
+            {
+                throw DbExceptionManager.UpdateException(tabla);
+            }
+        }
     }
 }

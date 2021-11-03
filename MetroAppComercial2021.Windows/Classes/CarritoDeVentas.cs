@@ -76,5 +76,9 @@ namespace MetroAppComercial2021.Windows.Classes
             return listaDeDetalles.Sum(d => d.Precio * d.Cantidad);
         }
 
+        public void VaciarCarrito()
+        {
+            listaDeDetalles.Clear();
+        }
     }
 }

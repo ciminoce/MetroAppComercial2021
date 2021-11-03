@@ -15,5 +15,6 @@ namespace MetroAppComercial2021.Datos.Comun.Repositorios
         int GetCantidad();
         List<Caja> GetListaPaginada(int registros, int paginaActual);
 
+        int ActualizarStock(Producto producto, int cantidad);
     }
 }
