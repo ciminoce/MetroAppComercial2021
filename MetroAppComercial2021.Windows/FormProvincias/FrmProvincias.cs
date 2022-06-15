@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using MetroAppComercial2021.Datos.Comun.UnitOfWork;
 using MetroAppComercial2021.Datos.Sql.UnitOfWork;
 using MetroAppComercial2021.Entidades.Entidades;
+using MetroAppComercial2021.Reportes;
+using MetroAppComercial2021.Reportes.Reportes.Provincias;
 using MetroAppComercial2021.Servicios;
 using MetroAppComercial2021.Servicios.Facades;
 using MetroAppComercial2021.Windows.Excepciones;
@@ -194,5 +196,12 @@ namespace MetroAppComercial2021.Windows.FormProvincias
 
         }
 
+        private void ImprimirIconButton_Click(object sender, EventArgs e)
+        {
+            crProvincias rpt = ManejadorDeReportes.GetReporteProvincias(lista);
+            FrmVisorReportes frm = new FrmVisorReportes();
+            frm.SetReporte(rpt);
+            frm.ShowDialog(this);
+        }
     }
 }

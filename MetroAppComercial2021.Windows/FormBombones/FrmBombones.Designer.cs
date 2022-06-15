@@ -47,10 +47,10 @@ namespace MetroAppComercial2021.Windows.FormBombones
             this.BorrarIconButton = new FontAwesome.Sharp.IconButton();
             this.NuevoIconButton = new FontAwesome.Sharp.IconButton();
             this.PaginadorMetroPanel = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.RegistrosMetroLabel = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.PaginasMetroLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.RegistrosMetroLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.BotonesMetroPanel = new MetroFramework.Controls.MetroPanel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.PanelContenedorMetroPanel.SuspendLayout();
@@ -153,7 +153,7 @@ namespace MetroAppComercial2021.Windows.FormBombones
             this.colPrecioVta.HeaderText = "Precio Vta.";
             this.colPrecioVta.Name = "colPrecioVta";
             this.colPrecioVta.ReadOnly = true;
-            this.colPrecioVta.Width = 106;
+            this.colPrecioVta.Width = 97;
             // 
             // colSuspendido
             // 
@@ -206,6 +206,7 @@ namespace MetroAppComercial2021.Windows.FormBombones
             this.ImprimirIconButton.Size = new System.Drawing.Size(50, 50);
             this.ImprimirIconButton.TabIndex = 53;
             this.ImprimirIconButton.UseVisualStyleBackColor = true;
+            this.ImprimirIconButton.Click += new System.EventHandler(this.ImprimirIconButton_Click);
             // 
             // EditarIconButton
             // 
@@ -279,24 +280,15 @@ namespace MetroAppComercial2021.Windows.FormBombones
             this.PaginadorMetroPanel.VerticalScrollbarHighlightOnWheel = false;
             this.PaginadorMetroPanel.VerticalScrollbarSize = 10;
             // 
-            // metroLabel1
+            // PaginasMetroLabel
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(16, 11);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Registros:";
-            // 
-            // RegistrosMetroLabel
-            // 
-            this.RegistrosMetroLabel.AutoSize = true;
-            this.RegistrosMetroLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.RegistrosMetroLabel.Location = new System.Drawing.Point(87, 11);
-            this.RegistrosMetroLabel.Name = "RegistrosMetroLabel";
-            this.RegistrosMetroLabel.Size = new System.Drawing.Size(16, 19);
-            this.RegistrosMetroLabel.TabIndex = 2;
-            this.RegistrosMetroLabel.Text = "0";
+            this.PaginasMetroLabel.AutoSize = true;
+            this.PaginasMetroLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.PaginasMetroLabel.Location = new System.Drawing.Point(87, 30);
+            this.PaginasMetroLabel.Name = "PaginasMetroLabel";
+            this.PaginasMetroLabel.Size = new System.Drawing.Size(17, 19);
+            this.PaginasMetroLabel.TabIndex = 2;
+            this.PaginasMetroLabel.Text = "0";
             // 
             // metroLabel2
             // 
@@ -307,15 +299,24 @@ namespace MetroAppComercial2021.Windows.FormBombones
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Páginas:";
             // 
-            // PaginasMetroLabel
+            // RegistrosMetroLabel
             // 
-            this.PaginasMetroLabel.AutoSize = true;
-            this.PaginasMetroLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.PaginasMetroLabel.Location = new System.Drawing.Point(87, 30);
-            this.PaginasMetroLabel.Name = "PaginasMetroLabel";
-            this.PaginasMetroLabel.Size = new System.Drawing.Size(17, 19);
-            this.PaginasMetroLabel.TabIndex = 2;
-            this.PaginasMetroLabel.Text = "0";
+            this.RegistrosMetroLabel.AutoSize = true;
+            this.RegistrosMetroLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.RegistrosMetroLabel.Location = new System.Drawing.Point(87, 11);
+            this.RegistrosMetroLabel.Name = "RegistrosMetroLabel";
+            this.RegistrosMetroLabel.Size = new System.Drawing.Size(17, 19);
+            this.RegistrosMetroLabel.TabIndex = 2;
+            this.RegistrosMetroLabel.Text = "0";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(16, 11);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Registros:";
             // 
             // BotonesMetroPanel
             // 

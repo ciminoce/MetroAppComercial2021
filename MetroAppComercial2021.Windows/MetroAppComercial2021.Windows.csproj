@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -47,6 +52,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +79,12 @@
     </Compile>
     <Compile Include="FormBombones\FrmBombonesEdit.Designer.cs">
       <DependentUpon>FrmBombonesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBombones\FrmOpcionesListadoBombones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBombones\FrmOpcionesListadoBombones.Designer.cs">
+      <DependentUpon>FrmOpcionesListadoBombones.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCajas\FrmBombonCajaEdit.cs">
       <SubType>Form</SubType>
@@ -247,6 +260,12 @@
     <Compile Include="FormVentas\FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVisorReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisorReportes.Designer.cs">
+      <DependentUpon>FrmVisorReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\HelperCalculos.cs" />
     <Compile Include="Helpers\HelperCombo.cs" />
     <Compile Include="Helpers\HelperForm.cs" />
@@ -272,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBombones\FrmBombonesEdit.resx">
       <DependentUpon>FrmBombonesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBombones\FrmOpcionesListadoBombones.resx">
+      <DependentUpon>FrmOpcionesListadoBombones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCajas\FrmBombonCajaEdit.resx">
       <DependentUpon>FrmBombonCajaEdit.cs</DependentUpon>
@@ -360,6 +382,9 @@
     <EmbeddedResource Include="FormUsuarios\FrmUsuariosEdit.resx">
       <DependentUpon>FrmUsuariosEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisorReportes.resx">
+      <DependentUpon>FrmVisorReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localidades\FrmLocalidades.resx">
       <DependentUpon>FrmLocalidades.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +442,10 @@
     <ProjectReference Include="..\MetroAppComercial2021.Entidades\MetroAppComercial2021.Entidades.csproj">
       <Project>{674F2048-7A54-4D09-8844-9F3E84BBBB19}</Project>
       <Name>MetroAppComercial2021.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroAppComercial2021.Reportes\MetroAppComercial2021.Reportes.csproj">
+      <Project>{6f77879a-da46-450b-8e0c-99e3be4c7afe}</Project>
+      <Name>MetroAppComercial2021.Reportes</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetroAppComercial2021.Servicios\MetroAppComercial2021.Servicios.csproj">
       <Project>{2e45833f-c311-4551-b91c-6754eba70211}</Project>

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MetroAppComercial2021.Datos.Comun.UnitOfWork;
 using MetroAppComercial2021.Datos.Sql.UnitOfWork;
 using MetroAppComercial2021.Entidades.Entidades;
+using MetroAppComercial2021.Reportes;
+using MetroAppComercial2021.Reportes.Reportes.Ciudades;
 using MetroAppComercial2021.Servicios;
 using MetroAppComercial2021.Servicios.Facades;
 using MetroAppComercial2021.Windows.Excepciones;
@@ -201,5 +203,12 @@ namespace MetroAppComercial2021.Windows.Localidades
 
         }
 
+        private void ImprimirIconButton_Click(object sender, EventArgs e)
+        {
+            crCiudades rpt = ManejadorDeReportes.GetReporteCiudades(lista);
+            FrmVisorReportes frm = new FrmVisorReportes();
+            frm.SetReporte(rpt);
+            frm.ShowDialog(this);
+        }
     }
 }

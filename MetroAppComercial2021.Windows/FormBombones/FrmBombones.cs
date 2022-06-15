@@ -233,5 +233,13 @@ namespace MetroAppComercial2021.Windows.FormBombones
             }
 
         }
+
+        private void ImprimirIconButton_Click(object sender, EventArgs e)
+        {
+            FrmOpcionesListadoBombones frm = new FrmOpcionesListadoBombones();
+            frm.SetListaBombones(_servicio.GetLista());
+            frm.ShowDialog(this);
+
+        }
     }
 }

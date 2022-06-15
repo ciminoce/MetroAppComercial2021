@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using MetroAppComercial2021.Datos.Comun.UnitOfWork;
 using MetroAppComercial2021.Datos.Sql.UnitOfWork;
 using MetroAppComercial2021.Entidades.Entidades;
+using MetroAppComercial2021.Reportes;
+using MetroAppComercial2021.Reportes.Reportes.Ventas;
 using MetroAppComercial2021.Servicios;
 using MetroAppComercial2021.Servicios.Facades;
 using MetroAppComercial2021.Windows.Excepciones;
@@ -370,6 +372,26 @@ namespace MetroAppComercial2021.Windows.FormVentas
                 HelperMessageBox.Message(this, exception.Message,"Error", MessageType.Error);
             }
 
+        }
+
+        private void RepoprteFacturaIconButton_Click(object sender, EventArgs e)
+        {
+            if (DatosMetroGrid.SelectedRows.Count==0)
+            {
+                return;
+            }
+
+            var r = DatosMetroGrid.SelectedRows[0];
+            Venta venta = (Venta) r.Tag;
+            if (venta.DetalleVentas.Count==0)
+            {
+                venta.DetalleVentas = _servicio.GetVentaDetalle(venta.VentaId);
+            }
+
+            crFactura rpt = ManejadorDeReportes.GetFacturaImpresa(venta);
+            FrmVisorReportes frm = new FrmVisorReportes();
+            frm.SetReporte(rpt);
+            frm.ShowDialog(this);
         }
     }
 }

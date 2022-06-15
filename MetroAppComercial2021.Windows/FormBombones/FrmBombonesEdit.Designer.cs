@@ -53,12 +53,12 @@ namespace MetroAppComercial2021.Windows.FormBombones
             this.StockMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.CancelarIconButton = new FontAwesome.Sharp.IconButton();
             this.OKIconButton = new FontAwesome.Sharp.IconButton();
             this.BombonMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.DescripcionMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.SuspendidoMetroCheckBox = new MetroFramework.Controls.MetroCheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CancelarIconButton = new FontAwesome.Sharp.IconButton();
             this.metroTabControl1.SuspendLayout();
             this.DatosMetroTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
@@ -440,18 +440,6 @@ namespace MetroAppComercial2021.Windows.FormBombones
             this.metroLabel1.TabIndex = 7;
             this.metroLabel1.Text = "Descripción:";
             // 
-            // CancelarIconButton
-            // 
-            this.CancelarIconButton.IconChar = FontAwesome.Sharp.IconChar.Ban;
-            this.CancelarIconButton.IconColor = System.Drawing.Color.Red;
-            this.CancelarIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CancelarIconButton.Location = new System.Drawing.Point(521, 537);
-            this.CancelarIconButton.Name = "CancelarIconButton";
-            this.CancelarIconButton.Size = new System.Drawing.Size(99, 60);
-            this.CancelarIconButton.TabIndex = 11;
-            this.CancelarIconButton.UseVisualStyleBackColor = true;
-            this.CancelarIconButton.Click += new System.EventHandler(this.CancelarIconButton_Click);
-            // 
             // OKIconButton
             // 
             this.OKIconButton.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -552,6 +540,18 @@ namespace MetroAppComercial2021.Windows.FormBombones
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // CancelarIconButton
+            // 
+            this.CancelarIconButton.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.CancelarIconButton.IconColor = System.Drawing.Color.Red;
+            this.CancelarIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CancelarIconButton.Location = new System.Drawing.Point(521, 537);
+            this.CancelarIconButton.Name = "CancelarIconButton";
+            this.CancelarIconButton.Size = new System.Drawing.Size(99, 60);
+            this.CancelarIconButton.TabIndex = 11;
+            this.CancelarIconButton.UseVisualStyleBackColor = true;
+            this.CancelarIconButton.Click += new System.EventHandler(this.CancelarIconButton_Click);
+            // 
             // FrmBombonesEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,8 +580,6 @@ namespace MetroAppComercial2021.Windows.FormBombones
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton CancelarIconButton;
         private FontAwesome.Sharp.IconButton OKIconButton;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage DatosMetroTabPage;
@@ -610,5 +608,6 @@ namespace MetroAppComercial2021.Windows.FormBombones
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox ImagenPictureBox;
         private FontAwesome.Sharp.IconButton SubirImagenIconButton;
+        private FontAwesome.Sharp.IconButton CancelarIconButton;
     }
 }

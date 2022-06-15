@@ -58,6 +58,7 @@ namespace MetroAppComercial2021.Windows.FormVentas
             this.CerrarIconButton = new FontAwesome.Sharp.IconButton();
             this.BorrarIconButton = new FontAwesome.Sharp.IconButton();
             this.NuevoIconButton = new FontAwesome.Sharp.IconButton();
+            this.RepoprteFacturaIconButton = new FontAwesome.Sharp.IconButton();
             this.BotonesMetroPanel.SuspendLayout();
             this.PaginadorMetroPanel.SuspendLayout();
             this.PanelContenedorMetroPanel.SuspendLayout();
@@ -404,6 +405,19 @@ namespace MetroAppComercial2021.Windows.FormVentas
             this.NuevoIconButton.UseVisualStyleBackColor = true;
             this.NuevoIconButton.Click += new System.EventHandler(this.NuevoIconButton_Click_1);
             // 
+            // RepoprteFacturaIconButton
+            // 
+            this.RepoprteFacturaIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RepoprteFacturaIconButton.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
+            this.RepoprteFacturaIconButton.IconColor = System.Drawing.Color.CornflowerBlue;
+            this.RepoprteFacturaIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RepoprteFacturaIconButton.Location = new System.Drawing.Point(639, 77);
+            this.RepoprteFacturaIconButton.Name = "RepoprteFacturaIconButton";
+            this.RepoprteFacturaIconButton.Size = new System.Drawing.Size(50, 50);
+            this.RepoprteFacturaIconButton.TabIndex = 74;
+            this.RepoprteFacturaIconButton.UseVisualStyleBackColor = true;
+            this.RepoprteFacturaIconButton.Click += new System.EventHandler(this.RepoprteFacturaIconButton_Click);
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,6 +431,7 @@ namespace MetroAppComercial2021.Windows.FormVentas
             this.Controls.Add(this.ActualizarIconButton);
             this.Controls.Add(this.ConsultaPorFechaIconButton);
             this.Controls.Add(this.ConsultaPorClienteIconButton);
+            this.Controls.Add(this.RepoprteFacturaIconButton);
             this.Controls.Add(this.ImprimirIconButton);
             this.Controls.Add(this.EditarIconButton);
             this.Controls.Add(this.CerrarIconButton);
@@ -463,5 +478,6 @@ namespace MetroAppComercial2021.Windows.FormVentas
         private FontAwesome.Sharp.IconButton ConsultaPorClienteIconButton;
         private FontAwesome.Sharp.IconButton ConsultaPorFechaIconButton;
         private FontAwesome.Sharp.IconButton ActualizarIconButton;
+        private FontAwesome.Sharp.IconButton RepoprteFacturaIconButton;
     }
 }
